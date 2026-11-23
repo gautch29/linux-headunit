@@ -30,11 +30,11 @@ back to the phone.
 
 | Main display | Instrument cluster |
 | --- | --- |
-| ![CarPlay Ultra app launcher on the live CM5 touchscreen](docs/images/ultra-main.png) | ![CarPlay Ultra instrument cluster with simulated vehicle data and lane view](docs/images/ultra-cluster.png) |
+| ![CarPlay Ultra app launcher on the live CM5 touchscreen](docs/images/ultra-main.png) | ![CarPlay Ultra DigiRing cluster with simulated vehicle readings](docs/images/ultra-cluster.png) |
 
 Both screenshots come from live iPhone sessions on the CM5 bench. The main
 display shows the CarPlay app launcher and vehicle controls. The cluster shows
-the signed gauges with simulated vehicle readings and a simulated lane view.
+the signed DigiRing gauges with simulated vehicle readings.
 The screens were captured in separate test sessions.
 [Capture provenance](docs/PROVENANCE.md#carplay-ultra-bench-screenshots)
 

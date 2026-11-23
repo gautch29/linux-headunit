@@ -394,8 +394,8 @@ house graphic. `src/oem_home_icon.inc` embeds its PNG bytes for the receiver.
 
 [Main display](images/ultra-main.png) shows the iPhone app launcher during V47
 Climate qualification on 10 October 2026. [Instrument cluster](images/ultra-cluster.png)
-shows the signed scene with simulated vehicle inputs and the project's lane view
-during V91 bench qualification on 6 November 2026. Both are screenshots of the
+shows the signed DigiRing gauges with simulated vehicle inputs during V38
+bench qualification on 9 October 2026. Both are screenshots of the
 CM5 displays from live CarPlay Ultra sessions using the `44C9FA31EC / 985`
 reference package. The PNGs document those two sessions. The signed package
 remains an external runtime input.
