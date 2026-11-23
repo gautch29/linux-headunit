@@ -2,7 +2,7 @@
 
 **Author** — gautch29
 
-Required Notice: Copyright 2026 gautch29
+Copyright © 2026 gautch29
 
 **Notice date** — 2026-11-23
 
@@ -15,9 +15,9 @@ from use of the material.
 
 This notice covers project-owned files that cannot carry a comment header,
 including JSON and binary fixtures. The date identifies this source review.
-Project-owned material is licensed under the
-[PolyForm Noncommercial License 1.0.0](LICENSE). The README images are
-project-generated offline fixtures and are covered by that license.
+Project-owned material, including the generated README images, is licensed
+under the [GNU Affero General Public License v3.0 only](LICENSE)
+(`AGPL-3.0-only`).
 
 ## Third-party material
 

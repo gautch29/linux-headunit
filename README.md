@@ -148,11 +148,17 @@ signed assets private. See the [local test matrix](docs/CI.md).
 
 ## License
 
-Project-owned material is **source-available for noncommercial use** under the
-[PolyForm Noncommercial License 1.0.0](LICENSE). It permits hobby use,
-modification and redistribution under its terms. Commercial use requires
-separate permission. Third-party components retain their own terms. See
-[notices](NOTICE.md) and [source provenance](docs/PROVENANCE.md).
+Project-owned material is licensed under the
+[GNU Affero General Public License v3.0 only](LICENSE).
+
+Commercial use is allowed. If you distribute a covered version, you must make
+its corresponding source, including your modifications, available to recipients
+under the license. If you modify the software and users interact with it
+remotely over a network, you must offer those users the corresponding source
+at no charge.
+
+Third-party components retain their own licenses.
+[Notices](NOTICE.md) · [Source provenance](docs/PROVENANCE.md)
 
 Linux Head Unit is independent and experimental. This distribution excludes
 Apple and automaker files. The project has no Apple or automaker approval and
