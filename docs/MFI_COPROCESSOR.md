@@ -72,53 +72,12 @@ timeout. iAP2, authenticated pairing and AirPlay auth-setup fixtures also pass.
 Raw traces, certificate data, challenge data, and signatures remain in ignored
 private captures or process memory and are not committed to Git.
 
-## DiPlay software authentication investigation
+## Software authentication research
 
-Inspected on **7 October 2026**: DiPlay tag `v0.2.14`, source commit
-`7887bb7bf2b52258e663a2a4ea1332382ed80ad8`, and its published APK. APK SHA-256
-`62b31f79db32bc7c85013ae830460b697a5952fad571ed0030b97341dde0b2e3`
-matches the release's `SHA256SUMS.txt`. This is external research; no DiPlay,
-xcertplay or original LIVI implementation was imported.
-
-The author's [identity notice](https://github.com/shihabal3amri/DiPlay/blob/7887bb7bf2b52258e663a2a4ea1332382ed80ad8/docs/THIRD_PARTY_NOTICES.md#experimental-authentication-data)
-attributes the runtime certificate/private key to public Carlinkit C2Air
-Allwinner V821 firmware. This investigation did not independently reproduce
-that firmware recovery. The [source-build guide](https://github.com/shihabal3amri/DiPlay/blob/7887bb7bf2b52258e663a2a4ea1332382ed80ad8/docs/BUILD.md)
-excludes runtime identities from ordinary Git/source builds and describes
-explicit external provisioning for release APKs.
-
-The [bootstrap](https://github.com/shihabal3amri/DiPlay/blob/7887bb7bf2b52258e663a2a4ea1332382ed80ad8/common/src/main/java/com/shilapi/xcertplay/DiPlayBootstrap.kt)
-installs the bundled identity into app-private storage. The
-[local authenticator](https://github.com/shihabal3amri/DiPlay/blob/7887bb7bf2b52258e663a2a4ea1332382ed80ad8/shared/src/main/java/com/shilapi/xcertplay/mfi/LocalMfiAuthenticationClient.kt)
-reports protocol 3, checks P-256 key/certificate consistency, signs an already
-derived 32-byte digest without hashing it again, and converts ECDSA DER into
-64-byte `r || s`. The controller's local branch has no remote fallback.
-This removes the physical signing device while retaining certificate-based
-accessory authentication; a self-generated key alone does not supply phone trust.
-
-The [iAP2 exchange](https://github.com/shihabal3amri/DiPlay/blob/7887bb7bf2b52258e663a2a4ea1332382ed80ad8/shared/src/main/java/com/shilapi/xcertplay/mfi/Iap2MfiAuthenticationClient.kt)
-still sends the certificate on `0xaa01`, signs the phone challenge for `0xaa03`
-and waits for phone success `0xaa05`. The
-[AirPlay responder](https://github.com/shihabal3amri/DiPlay/blob/7887bb7bf2b52258e663a2a4ea1332382ed80ad8/shared/src/main/java/com/shilapi/xcertplay/airplay/MfiSapAuthSetup.kt)
-uses that same local MFI provider for `/auth-setup`; its separate BAA branch
-does not explain the bundled P-256 identity.
-
-Independent artifact checks found both runtime assets, a 607-byte certificate,
-a matching P-256 private key, and the expected local-signer code markers in DEX.
-The certificate's issuer field names Apple's Accessories Certification
-Authority; that field alone is not chain validation. OpenSSL signed eight
-fresh random synthetic 32-byte digests using the bundled key: all signatures
-verified against the certificate public key, converted to 64-byte raw form,
-and failed verification against modified digests. Private bytes stayed in the
-downloaded APK or process memory outside Git and were not printed.
-
-Evidence is **source inspection, published-artifact inspection and cryptographic
-consistency**, not an Android/iPhone run or independent Apple trust-chain
-validation. Our phone's acceptance, fresh pairing/reconnect, future iOS
-acceptance and full Ultra operation with this identity remain unverified.
-DiPlay's inherited Ultra description establishes only a prompt trigger, not
-our signed two-panel/UI-Sync acceptance gate. Certificate/private-key reuse
-also leaves continued acceptance of the shared identity unresolved.
+The feasibility study compared certificate handling and prehashed P-256
+challenge signing with an external software implementation. Synthetic tests
+check signature format, changed-digest rejection and matched-key admission.
+[Source provenance](PROVENANCE.md) records the implementation boundaries.
 
 ## Optional software provider
 
@@ -183,13 +142,10 @@ Existing hardware register/deadline and protocol fixtures remain enabled.
 Launcher checks cover default/inherited-provider isolation, complete/distinct
 paths, and invalid-identity rejection before radio/session creation.
 
-The inspected DiPlay identity is provisioned outside Git on the Mac and CM5,
-with private permissions, solely for the optional experiment. User instruction:
-**prepare for later testing; the iPhone is unavailable**. The selected V13
-release remains hardware-authenticated. Retained publication, exclusive phone
-testing with V13 restoration, fresh pairing/reconnect and complete Ultra
-acceptance with the software identity remain open. Separate software test
-pairing storage preserves the physical provider's paired-controller records.
+The experiment uses separately provisioned private credentials and an
+isolated pairing store. The original V13 release used hardware
+authentication. The checks above establish software behavior with synthetic
+inputs. See the later phone trial for the live qualification boundary.
 
 ### Scoped verification — 8 October 2026
 
@@ -236,12 +192,10 @@ The option is ready for later retained-candidate phone qualification.
 
 ### Real-phone trial — 9 October 2026
 
-The user authorized the software-provider trial. The live CM5 was found running
-native UI's retained `cm5-20261009-software-mfi-v32`, manifest
+The CM5 ran the retained `cm5-20261009-software-mfi-v32`, manifest
 `40534542d2b6293cb02098173f37e733a4a49ac3cd84da9b0bb837627c5b810f`,
 with source `e523369`. Its complete installed unit binding verifies. The explicit
-external DiPlay identity passes the provider's startup admission; the receiver
-reports `mfi-backend=software`. The physical provider's controller records remain
+test identity passes startup validation. The receiver reports `mfi-backend=software`. The physical provider's controller records remain
 separate from `pair-store-software-mfi-20261009`; no pairing was removed or reset.
 
 Four observed real-phone connections reach identification acceptance, certificate

@@ -14,16 +14,27 @@ separate iPhone video streams with vehicle data, and maps touchscreen input
 back to the phone.
 
 > **A compatible MFi authentication chip is required for the documented live
-> iPhone setup.** Connect the MFi coprocessor to the CM5 over I²C. Ultra also
-> requires a separately supplied compatible signed scene package and trust
-> inputs. [MFi authentication](docs/MFI_COPROCESSOR.md) ·
-> [Signed assets](docs/ULTRA_ASSETS.md)
+> iPhone setup.** Connect the MFi coprocessor to the CM5 over I²C.
+> [MFi authentication](docs/MFI_COPROCESSOR.md)
+>
+> **One CarPlay Ultra asset package is supported today.** Use the signed
+> package with identifier `44C9FA31EC` and accessory version `985`. Supply
+> that package and its trust inputs separately. Other packages and versions
+> are unqualified. [Signed assets](docs/ULTRA_ASSETS.md)
 
 [CarPlay Ultra on the bench](#carplay-ultra-on-the-bench) ·
 [CM5 setup](#set-up-a-cm5-bench) · [Offline demos](#try-it-without-a-phone) ·
 [Documentation](docs/README.md) · [License](LICENSE)
 
 ## CarPlay Ultra on the bench
+
+| Main display | Instrument cluster |
+| --- | --- |
+| ![Ultra main scene with a synthetic navigation stream](docs/images/ultra-main.png) | ![Ultra cluster scene with simulated gauges and a separate synthetic map stream](docs/images/ultra-cluster.png) |
+
+These are screenshots from the Ultra reference renderer with project-owned
+scene artwork and synthetic video and vehicle data.
+[How the previews were made](docs/PROVENANCE.md#ultra-preview-images)
 
 Earlier CM5 bench generations ran CarPlay Ultra with a real iPhone. The main
 display showed the Ultra interface with touch, while the cluster combined a

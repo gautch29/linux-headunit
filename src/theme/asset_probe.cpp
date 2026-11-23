@@ -728,22 +728,22 @@ script::Stats probe(const script::ResourceReader& asset, const std::string& disp
   r.evaluate(R"(
     session = false; received = 0; resets = 0; ready = 0
     local Session = require 'APL.ClusterControlSession'
-    session = Session.new('livi-offline-peer')
+    session = Session.new('headunit-offline-peer')
     session:setDataHandler(function(bytes)
       local command = CP.parsePlist(bytes)
-      assert(command.type == 17 and command.data.probe == 'livi')
+      assert(command.type == 17 and command.data.probe == 'synthetic')
       received += 1
     end)
     session:setResetHandler(function() resets += 1 end)
     session:setReadyHandler(function(id)
-      assert(id == 'livi-offline-peer'); ready += 1
+      assert(id == 'headunit-offline-peer'); ready += 1
     end)
     session:start()
   )",
              "offline-asset-probe");
   const auto reset = next(channel, transport, display);
   CHECK(reset.type == MessageType::reset && reset.session == 1 && reset.sequence == 1);
-  CHECK(reset.version == 2 && reset.peer_id == "livi-offline-peer");
+  CHECK(reset.version == 2 && reset.peer_id == "headunit-offline-peer");
   Packet peer;
   peer.type = MessageType::reset_complete;
   peer.session = reset.session;
@@ -755,14 +755,14 @@ script::Stats probe(const script::ResourceReader& asset, const std::string& disp
   r.tick();
   r.evaluate("assert(not session:getIsReady() and ready == 0)");
   CHECK(!transport.pending());
-  peer.peer_id = "livi-offline-peer";
+  peer.peer_id = "headunit-offline-peer";
   CHECK(receive(peer));
   const auto complete = next(channel, transport, display);
   CHECK(complete.type == MessageType::reset_complete && complete.sequence == 2);
   CHECK(complete.version == 2 && complete.peer_id == peer.peer_id);
   r.evaluate(R"(
     assert(session:getIsReady() and ready == 1)
-    session:sendCommand({type=17, data={probe='livi'}})
+    session:sendCommand({type=17, data={probe='synthetic'}})
   )");
   const auto command = next(channel, transport, display);
   CHECK(command.type == MessageType::command && command.sequence == 3 && !command.data.empty());
@@ -1006,7 +1006,7 @@ void controls_probe(const script::ResourceReader& asset) {
         vehicle::ValueKind::string, text("Cluster_Display"));
     add(zone, {"automakerRequestContent", "requestContent", "displayZoneIdentifier"},
         vehicle::ValueKind::string, text(zone));
-    initial.emplace(url, text(i ? "livi-test://two" : "livi-test://one"));
+    initial.emplace(url, text(i ? "headunit-preview://two" : "headunit-preview://one"));
     initial.emplace(on_ids[i], Value{false});
   }
   auto service = Value{Dictionary{{text("iid"), integer(2)},
@@ -1047,8 +1047,8 @@ void controls_probe(const script::ResourceReader& asset) {
   runtime.evaluate(R"(
     assert(#pressEvents==0)
     local states=controlUpdater:getData({controlIds.requestContent})[controlIds.requestContent].Cluster_Display
-    assert(states.zone1.contentURL=='livi-test://one' and states.zone1.on==false)
-    assert(states.zone2.contentURL=='livi-test://two' and states.zone2.on==false)
+    assert(states.zone1.contentURL=='headunit-preview://one' and states.zone1.on==false)
+    assert(states.zone2.contentURL=='headunit-preview://two' and states.zone2.on==false)
     for _, controller in ipairs(contentControllers) do assert(controller:isZoneSupported()) end
   )",
                    "original-control-initial-state");

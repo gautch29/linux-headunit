@@ -6,7 +6,7 @@
 """Exercise the standalone Pi's optional pair-setup path with a synthetic client.
 
 Requires Python cryptography on the test machine. The accessory identity and
-private key must be test-only files. No phone or LIVI service is involved.
+private key must be synthetic fixtures. The client exercises a local endpoint.
 """
 
 import argparse

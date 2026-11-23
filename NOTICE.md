@@ -16,7 +16,7 @@ from use of the material.
 This notice covers project-owned files that cannot carry a comment header,
 including JSON and binary fixtures. The date identifies this source review.
 Project-owned material is licensed under the
-[PolyForm Noncommercial License 1.0.0](LICENSE). The two README images are
+[PolyForm Noncommercial License 1.0.0](LICENSE). The README images are
 project-generated offline fixtures and are covered by that license.
 
 ## Third-party material

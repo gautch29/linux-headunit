@@ -390,6 +390,19 @@ decoration. The signed scene and its underlying assets are external.
 The OEM Home icon in `assets/oem/home-icon.png` is an original monochrome
 house graphic. `src/oem_home_icon.inc` embeds its PNG bytes for the receiver.
 
+## Ultra preview images
+
+`docs/images/ultra-main.png` and `docs/images/ultra-cluster.png` are outputs of
+the C++ reference renderer used by the Ultra scene host. The preview tool feeds
+two fictional route frames into separate video layers and draws the instruments
+and labels from original graphics. It reads only its in-memory fixture artwork.
+Both screenshots show simulated input.
+
+```sh
+cmake --build build --target headunit-ultra-scene-preview
+./build/headunit-ultra-scene-preview build/ultra-preview
+```
+
 ## Hardware boundary
 
 Board and harness specifications and MCU firmware are maintained separately.

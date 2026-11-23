@@ -18,6 +18,10 @@ __pycache__/
 *.pfx
 *.pk8
 *.p7b
+*.cer
+*.crt
+*.der
+/private/
 
 # Local device captures and proprietary firmware downloads
 *.pcap

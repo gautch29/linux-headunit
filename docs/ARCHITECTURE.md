@@ -6,7 +6,7 @@ Provided as is, without warranty. See NOTICE.md.
 
 # Architecture
 
-Ultra Headunit is an original C++20 Linux receiver for a main touchscreen and a separate instrument display. It uses no LIVI source code. The installed Apple-signed theme, pairing identity, keys and phone captures are external inputs, not repository contents. This page maps the current code and its ownership boundaries; [feature status](../README.md) records what has been tested with a phone.
+Linux Head Unit is an original C++20 Linux receiver for a main touchscreen and a separate instrument display. It uses no LIVI source code. The installed Apple-signed theme, pairing identity, keys and phone captures are external inputs, not repository contents. This page maps the current code and its ownership boundaries; [feature status](../README.md) records what has been tested with a phone.
 
 ## Current system and release boundary
 

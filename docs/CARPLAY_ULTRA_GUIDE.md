@@ -10,6 +10,11 @@ This guide describes this project's experimental, independent receiver and the C
 
 ## Tested path and current boundary
 
+The supported live setup uses one signed asset package, `44C9FA31EC` with
+accessory version `985`. Supply the exact package and its trust inputs
+externally. Other packages and versions remain unqualified.
+[Asset verification](ULTRA_ASSETS.md) · [Discovery experiments](ASSET_DISCOVERY.md)
+
 The CM5 has shown the full Ultra main view with working physical touch and a signed cluster scene with live Apple Maps video between local gauges on **two physical outputs**. The reference pack identifies as `44C9FA31EC` version `985`, with `Center_Display` and `Cluster_Display` panels. Those are pack-specific identifiers. The source checkout has also shown Home/Back and Standard/Ultra switching; the selected **Version 3 Home-readiness release** has passed sealed CM5 preflight and service-path checks, while packaged physical touch, cold boot and rollback need qualification. [CM5 bring-up](CM5_BRINGUP.md), [application releases](APPLICATION_RELEASES.md).
 
 Sustained fresh phone-video 60 fps, disconnect/fault recovery under every condition, audible playback, microphone/Siri/calls and car hardware input remain open. The local 60 fps scene result and phone-video throughput are different measures; use [rendering measurements](ULTRA_PERFORMANCE.md) for the actual comparisons. The simulated Climate and car-settings pages have opened on an iPhone, but no physical HVAC is attached. [Vehicle-state guide](VEHICLE_STATE_GUIDE.md).

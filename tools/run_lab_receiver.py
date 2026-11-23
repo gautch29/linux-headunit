@@ -5,10 +5,9 @@
 
 """Bounded, independent AP + discovery + receiver test on a Linux bench.
 
-Run as root only when LIVI and other AP processes are stopped. This launcher
-uses our own C++ binaries and the system hostapd/dnsmasq tools; it does not
-read or modify LIVI settings. All started processes and addresses are cleaned
-up on exit or SIGTERM.
+Stop competing receiver and AP processes before running as root. This
+launcher uses the project C++ binaries and system hostapd/dnsmasq. It
+retires its processes and addresses on exit or SIGTERM.
 """
 
 import argparse
