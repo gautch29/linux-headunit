@@ -390,18 +390,15 @@ decoration. The signed scene and its underlying assets are external.
 The OEM Home icon in `assets/oem/home-icon.png` is an original monochrome
 house graphic. `src/oem_home_icon.inc` embeds its PNG bytes for the receiver.
 
-## Ultra preview images
+## CarPlay Ultra bench screenshots
 
-`docs/images/ultra-main.png` and `docs/images/ultra-cluster.png` are outputs of
-the C++ reference renderer used by the Ultra scene host. The preview tool feeds
-two fictional route frames into separate video layers and draws the instruments
-and labels from original graphics. It reads only its in-memory fixture artwork.
-Both screenshots show simulated input.
-
-```sh
-cmake --build build --target headunit-ultra-scene-preview
-./build/headunit-ultra-scene-preview build/ultra-preview
-```
+[Main display](images/ultra-main.png) shows the iPhone app launcher during V47
+Climate qualification on 10 October 2026. [Instrument cluster](images/ultra-cluster.png)
+shows the signed scene with simulated vehicle inputs and the project's lane view
+during V91 bench qualification on 6 November 2026. Both are screenshots of the
+CM5 displays from live CarPlay Ultra sessions using the `44C9FA31EC / 985`
+reference package. The PNGs document those two sessions. The signed package
+remains an external runtime input.
 
 ## Hardware boundary
 

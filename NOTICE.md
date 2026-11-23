@@ -15,9 +15,13 @@ from use of the material.
 
 This notice covers project-owned files that cannot carry a comment header,
 including JSON and binary fixtures. The date identifies this source review.
-Project-owned material, including the generated README images, is licensed
+Project-owned material, including the native demo images, is licensed
 under the [GNU Affero General Public License v3.0 only](LICENSE)
 (`AGPL-3.0-only`).
+
+The CarPlay Ultra bench screenshots document the CM5 display output. Rights
+in the CarPlay interface and signed theme shown in them remain with their
+respective holders. [Screenshot provenance](docs/PROVENANCE.md#carplay-ultra-bench-screenshots)
 
 ## Third-party material
 

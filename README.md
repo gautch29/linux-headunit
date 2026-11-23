@@ -30,11 +30,13 @@ back to the phone.
 
 | Main display | Instrument cluster |
 | --- | --- |
-| ![Ultra main scene with a synthetic navigation stream](docs/images/ultra-main.png) | ![Ultra cluster scene with simulated gauges and a separate synthetic map stream](docs/images/ultra-cluster.png) |
+| ![CarPlay Ultra app launcher on the live CM5 touchscreen](docs/images/ultra-main.png) | ![CarPlay Ultra instrument cluster with simulated vehicle data and lane view](docs/images/ultra-cluster.png) |
 
-These are screenshots from the Ultra reference renderer with project-owned
-scene artwork and synthetic video and vehicle data.
-[How the previews were made](docs/PROVENANCE.md#ultra-preview-images)
+Both screenshots come from live iPhone sessions on the CM5 bench. The main
+display shows the CarPlay app launcher and vehicle controls. The cluster shows
+the signed gauges with simulated vehicle readings and a simulated lane view.
+The screens were captured in separate test sessions.
+[Capture provenance](docs/PROVENANCE.md#carplay-ultra-bench-screenshots)
 
 Earlier CM5 bench generations ran CarPlay Ultra with a real iPhone. The main
 display showed the Ultra interface with touch, while the cluster combined a
@@ -160,6 +162,6 @@ at no charge.
 Third-party components retain their own licenses.
 [Notices](NOTICE.md) · [Source provenance](docs/PROVENANCE.md)
 
-Linux Head Unit is independent and experimental. This distribution excludes
-Apple and automaker files. The project has no Apple or automaker approval and
-has no qualification as a vehicle's primary instrument cluster.
+Linux Head Unit is independent and experimental. Signed themes and vendor
+binaries are external inputs. The project has no Apple or automaker approval
+and has no qualification as a vehicle's primary instrument cluster.
