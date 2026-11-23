@@ -1,0 +1,24 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+[Unit]
+Description=Independent CarPlay receiver
+Requires=headunit-compositor.service
+Wants=headunit-cluster.service bluetooth.service avahi-daemon.service NetworkManager.service
+After=headunit-compositor.service headunit-cluster.service bluetooth.service avahi-daemon.service NetworkManager.service
+PartOf=headunit-compositor.service
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/nmcli radio wifi on
+ExecStartPre=/usr/bin/python3 @REPO@/tools/run_lab_receiver.py --config @CONFIG@ --dry-run
+ExecStart=/usr/bin/python3 @REPO@/tools/run_lab_receiver.py --config @CONFIG@
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

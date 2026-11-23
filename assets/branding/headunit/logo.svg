@@ -1,0 +1,12 @@
+<!--
+Author: gautch29
+Notice date: 2026-11-23
+Provided as is, without warranty. See NOTICE.md.
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 304" fill="currentColor">
+  <title>Linux Head Unit</title>
+  <polygon id="main-panel" points="24,76 239,76 239,184 221,166 221,94 42,94 42,194 217,194 235,212 24,212"/>
+  <polygon id="display-link" points="194,143 222,143 279,200 251,200"/>
+  <polygon id="instrument-panel" points="264,104 406,104 406,228 290,228 272,210 388,210 388,122 282,122 282,176 264,158"/>
+</svg>

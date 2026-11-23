@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "requestFile": "/run/user/1000/headunit-camera-controller/manual.request",
+  "ownerFile": "/run/user/1000/headunit-camera-controller/manual.owner",
+  "statusFile": "/run/user/1000/headunit-camera/native.status",
+  "controlSocket": "/run/user/1000/headunit-camera-controller/manual.sock",
+  "timing": {
+    "leaseMs": 250,
+    "pollMs": 50,
+    "statusMaximumAgeMs": 500
+  }
+}

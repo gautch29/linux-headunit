@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "vehicle": {"make": "Example", "model": "Configurable vehicle", "year": 2026},
+  "nativeCluster": {"speedUnit": "kmh", "speedMaximumKmh": 240, "rpmMaximum": 7000, "rpmRedline": 6000, "showRpm": true},
+  "ultraSignals": [
+    {"path": ["vehicleMotion", "displayedSpeed", "speedMaxKMH"], "kind": "real", "maxAgeMs": 250, "units": 1032, "fixedValue": 240.0},
+    {"path": ["fuel", "fuelLevel", "fuelLevel"], "kind": "real", "maxAgeMs": 250, "vehicleField": "fuel_percent", "minimumValue": 0, "maximumValue": 100}
+  ],
+  "driveModes": [
+    {"id": "comfort", "assetIdentifier": "GT"},
+    {"id": "sport", "assetIdentifier": "sport"}
+  ],
+  "capabilityBackend": "simulation",
+  "capabilities": {
+    "climate": {"version": 1, "zones": [{"id": "driver", "layout": "seat_front_left", "temperature": {"units": "celsius", "minimum": 16, "maximum": 30, "step": 0.5, "initial": 21}}]}
+  }
+}

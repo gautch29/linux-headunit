@@ -1,0 +1,117 @@
+#!/usr/bin/python3 -I
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+"""Boot graph only: never recover a journal or call the service manager here."""
+import hashlib
+import json
+import os
+from pathlib import Path
+import stat
+import sys
+
+ROOT = Path('@HELPER_ROOT@')
+DIGEST = '@MANIFEST_SHA256@'
+UNITS = '@UNIT_DIRECTORY@'
+STATE = '@TRANSACTION_DIRECTORY@'
+SERVICE = 'headunit-boot-recovery.service'
+OWNERS = tuple('headunit-' + name + '.service' for name in
+               ('compositor', 'outputs', 'cluster', 'receiver', 'vehicle', 'camera', 'phone-page'))
+
+
+def read(path, maximum, mode):
+    # This narrow loader checks the already admitted, hash-pinned inventory.
+    # It cannot execute a damaged verifier to decide whether that verifier is safe.
+    for parent in path.parents:
+        info = parent.lstat()
+        if (not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid() and info.st_uid != 0 or
+                info.st_mode & 0o022 and not (info.st_uid == 0 and info.st_mode & stat.S_ISVTX)):
+            raise ValueError('Unsafe helper ancestor')
+    fd = os.open(path, os.O_RDONLY | os.O_CLOEXEC | os.O_NOFOLLOW | os.O_NONBLOCK)
+    try:
+        info = os.fstat(fd)
+        if (not stat.S_ISREG(info.st_mode) or info.st_nlink != 1 or info.st_uid != os.getuid() or
+                stat.S_IMODE(info.st_mode) != mode or not 0 < info.st_size <= maximum):
+            raise ValueError('Unsafe helper member')
+        data = b''
+        while len(data) < info.st_size:
+            chunk = os.read(fd, min(65536, info.st_size - len(data)))
+            if not chunk: raise ValueError('Helper changed during read')
+            data += chunk
+        final = os.fstat(fd)
+        if (os.read(fd, 1) or (info.st_size, info.st_mtime_ns, info.st_ctime_ns) !=
+                (final.st_size, final.st_mtime_ns, final.st_ctime_ns)):
+            raise ValueError('Helper changed during read')
+        return data
+    finally:
+        os.close(fd)
+
+
+def helper_valid():
+    raw = read(ROOT / 'manifest.json', 65536, 0o444)
+    if hashlib.sha256(raw).hexdigest() != DIGEST: return False
+    manifest = json.loads(raw)
+    if (manifest.get('version') not in (4, 5) or manifest.get('purpose') != 'boot-recovery' or
+            manifest.get('root') != str(ROOT) or manifest.get('administrator_uid') != os.getuid() or
+            type(manifest.get('files')) is not list or not 0 < len(manifest['files']) <= 64):
+        return False
+    # Imports from the helper directory must not find an unmanifested module.
+    # Reuse the pinned records as the file inventory, plus the release layout.
+    directories = {'', 'tools', 'build', 'config', 'deploy', 'deploy/cm5'}
+    expected = directories | {'manifest.json'} | {item['path'] for item in manifest['files']}
+    found = set()
+    for name in sorted(directories):
+        directory = ROOT / name; info = directory.lstat()
+        if (not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid() or
+                stat.S_IMODE(info.st_mode) != (0o750 if name == 'config' else 0o555)):
+            return False
+        found.add(name)
+        with os.scandir(directory) as entries:
+            for entry in entries:
+                child = str(Path(entry.path).relative_to(ROOT))
+                if child not in expected or entry.is_symlink(): return False
+                found.add(child)
+    if found != expected: return False
+    total = 0; seen = set()
+    for item in manifest['files']:
+        name = item['path']; path = Path(name)
+        if (type(name) is not str or path.is_absolute() or '..' in path.parts or
+                str(path) != name or name in seen or item['mode'] != 0o444 or item['uid'] != os.getuid()):
+            return False
+        seen.add(name)
+        data = read(ROOT / name, 131072, item['mode']); total += len(data)
+        if total > 2 * 1024 * 1024 or len(data) != item['size'] or hashlib.sha256(data).hexdigest() != item['sha256']:
+            return False
+    return True
+
+
+def gate(command):
+    return ('[Unit]\nDescription=Retained headunit interrupted installation recovery\n'
+            'DefaultDependencies=no\n[Service]\nType=oneshot\nRemainAfterExit=yes\n'
+            'TimeoutStartSec=45\nExecStart=' + command + '\n')
+
+
+def main():
+    if len(sys.argv) != 4: raise ValueError('Systemd generator output directories required')
+    output = Path(sys.argv[1])
+    # All dependencies and the rejecting gate exist BEFORE reading helper bytes.
+    # This includes old sealed units and optional roles absent at activation.
+    for name in OWNERS:
+        directory = output / (name + '.d'); directory.mkdir(exist_ok=True)
+        (directory / '00-headunit-boot-recovery.conf').write_text(
+            '[Unit]\nRequires=' + SERVICE + '\nAfter=' + SERVICE + '\n')
+    unit = output / SERVICE; unit.write_text(gate('/bin/false'))
+    wants = output / 'multi-user.target.wants'; wants.mkdir(exist_ok=True)
+    link = wants / SERVICE
+    if not link.exists() and not link.is_symlink(): link.symlink_to('../' + SERVICE)
+    try:
+        if helper_valid():
+            unit.write_text(gate('/usr/bin/python3 -B -E -s ' + str(ROOT / 'tools/appliance_boot.py') +
+                ' --helper-root ' + str(ROOT) + ' --manifest-sha256 ' + DIGEST +
+                ' --unit-directory ' + UNITS + ' --transaction-directory ' + STATE))
+    except (OSError, ValueError, KeyError, TypeError):
+        pass  # Keep dependencies and the rejecting gate; never silently omit admission.
+
+
+if __name__ == '__main__': main()

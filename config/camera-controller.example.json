@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "manual": {
+    "enabled": true,
+    "requestFile": "/run/user/1000/headunit-camera-controller/manual.request"
+  },
+  "reverse": {
+    "enabled": false,
+    "basis": "engaged-gear",
+    "maximumAgeMs": 250,
+    "allowSimulation": false
+  },
+  "vehicleSocket": "/run/user/1000/headunit-vehicle/camera-controller.sock",
+  "output": {
+    "requestFile": "/run/user/1000/headunit-camera/camera.request",
+    "ownerFile": "/run/user/1000/headunit-camera/controller.owner",
+    "statusFile": "/run/user/1000/headunit-camera/native.status"
+  },
+  "timing": {
+    "requestLeaseMs": 250,
+    "statusMaximumAgeMs": 500,
+    "startupTimeoutMs": 2000,
+    "pollMs": 10
+  }
+}

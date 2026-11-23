@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "targets": [
+    {
+      "key": "bench.climate.driver.temperature_target_c",
+      "kind": "real",
+      "writable": false,
+      "max_age_ms": 500,
+      "minimum": 16.0,
+      "maximum": 30.0,
+      "step": 0.5
+    },
+    {
+      "key": "bench.climate.driver.fan_level",
+      "kind": "integer",
+      "writable": false,
+      "max_age_ms": 500,
+      "minimum": 0,
+      "maximum": 7,
+      "step": 1
+    },
+    {
+      "key": "bench.lighting.comfort.on",
+      "kind": "boolean",
+      "writable": false,
+      "max_age_ms": 500
+    }
+  ]
+}

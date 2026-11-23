@@ -1,0 +1,31 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+[Unit]
+Description=Headunit native Home and phone pages
+Requires=headunit-compositor.service
+Wants=headunit-outputs.service headunit-receiver.service
+After=headunit-compositor.service headunit-outputs.service
+PartOf=headunit-compositor.service
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=notify
+NotifyAccess=main
+TimeoutStartSec=15
+User=@USER@
+Environment=XDG_RUNTIME_DIR=/run/user/@UID@
+Environment=WAYLAND_DISPLAY=@PAGE_WAYLAND@
+Environment=GDK_BACKEND=wayland
+Environment=GTK_A11Y=none
+ExecStartPre=/usr/bin/python3 -B -E -s @REPO@/tools/wait_wayland.py --socket @PAGE_WAYLAND@ --output @PAGE_OUTPUT@
+ExecStart=/usr/bin/python3 -B -E -s @REPO@/tools/phone_page_boot.py --profile @PHONE_PAGE_PROFILE@ --manager-profile @MANAGER_PROFILE@ --receiver-config @CONFIG@
+Restart=on-failure
+RestartSec=3
+KillMode=control-group
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target

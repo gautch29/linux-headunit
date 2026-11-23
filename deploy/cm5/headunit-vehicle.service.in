@@ -1,0 +1,20 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+[Unit]
+Description=Headunit private vehicle snapshot fan-out
+After=systemd-user-sessions.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=@USER@
+UMask=0077
+ExecStart=/usr/bin/python3 @REPO@/tools/vehicle_fanout.py --config @VEHICLE_FANOUT_CONFIG@
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

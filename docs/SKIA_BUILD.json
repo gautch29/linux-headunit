@@ -1,0 +1,11 @@
+{
+  "dependency": "Skia",
+  "source": "https://skia.googlesource.com/skia.git",
+  "revision": "a8363ad146938c9df9ec0c975c81849a6494d175",
+  "existingBuildReceipt": "source-receipt.json alongside external libskia.a",
+  "migration": "Copied the previously built third-party Skia tree into /home/headunit/ultra-deps/skia-a8363ad14693. No original LIVI implementation was imported. The source copy has no .git metadata; revision attribution comes from its prior build receipt, not a fresh git verification.",
+  "piArchiveSha256": "0e6b1dbd4a8b0d944e18e8433dc79a9d3b37d3b948725abbc680de83a7af591c",
+  "semanticArgsSha256": "fc69a0dd02b5d84727126dcdf47700d9f3560ef1c78ef51b35c1630cad5874f6",
+  "buildArgsSha256": "c4439dad91a61c5f4014a883794caeb969ef787a4d685800cc1d3dcdb60c6f27",
+  "license": "Skia LICENSE and included third-party notices are retained in the external tree and must accompany applicable distributions."
+}

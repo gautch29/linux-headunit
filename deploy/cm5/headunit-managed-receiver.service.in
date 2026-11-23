@@ -1,0 +1,23 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+[Unit]
+Description=Headunit native phone connection manager
+Requires=headunit-compositor.service
+Wants=headunit-cluster.service bluetooth.service avahi-daemon.service NetworkManager.service
+After=bluetooth.service avahi-daemon.service
+PartOf=headunit-compositor.service
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -B -E -s @REPO@/tools/phone_manager.py --config @CONFIG@ --manager-profile @MANAGER_PROFILE@ --uid @UID@ @MANAGER_VEHICLE_ARG@
+Restart=on-failure
+RestartSec=3
+KillMode=control-group
+TimeoutStopSec=25
+
+[Install]
+WantedBy=multi-user.target

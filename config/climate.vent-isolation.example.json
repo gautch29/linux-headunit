@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "experimental": true,
+  "zones": [
+    {
+      "id": "driver",
+      "layout": "seat_front_left",
+      "temperature": {
+        "units": "celsius",
+        "minimum": 16,
+        "maximum": 30,
+        "step": 0.5,
+        "initial": 21,
+        "on": { "initial": true }
+      },
+      "fan": {
+        "minimum": 0,
+        "maximum": 100,
+        "step": 1,
+        "initial": 40,
+        "on": { "initial": true },
+        "auto": { "initial": false }
+      },
+      "vents": {
+        "combinations": [["upper"], ["upper", "lower"], ["lower"], ["window", "lower"]],
+        "initial": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "experimental": true,
+  "sections": [],
+  "settings": [],
+  "vehicle_resources": {
+    "exterior_style": "DBX",
+    "interior_style": "DBX",
+    "vehicle_layout": "DBX"
+  },
+  "cluster_content": {
+    "pages": [
+      {
+        "id": "body",
+        "widget": "body",
+        "panel": "Cluster_Display",
+        "zone": "zone1"
+      },
+      {
+        "id": "tyres",
+        "widget": "tyres",
+        "panel": "Cluster_Display",
+        "zone": "zone1"
+      }
+    ],
+    "tyres": [
+      {
+        "id": "front_left",
+        "layout": "tire_front_left",
+        "pressure": {
+          "units": 932
+        },
+        "pressure_state": {},
+        "sensor_state": {}
+      },
+      {
+        "id": "front_right",
+        "layout": "tire_front_right",
+        "pressure": {
+          "units": 932
+        },
+        "pressure_state": {},
+        "sensor_state": {}
+      },
+      {
+        "id": "rear_left",
+        "layout": "tire_rear_left",
+        "pressure": {
+          "units": 932
+        },
+        "pressure_state": {},
+        "sensor_state": {}
+      },
+      {
+        "id": "rear_right",
+        "layout": "tire_rear_right",
+        "pressure": {
+          "units": 932
+        },
+        "pressure_state": {},
+        "sensor_state": {}
+      }
+    ]
+  }
+}

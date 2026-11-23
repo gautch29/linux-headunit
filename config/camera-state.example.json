@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "experimental": true,
+  "stream_identifier": "camera",
+  "general": {
+    "on": {
+      "binding": "camera.visible",
+      "max_age_ms": 151,
+      "writable": false,
+      "initial": false
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "enabled": true,
+  "hideDuringStartup": true,
+  "canvas": {
+    "width": 1920,
+    "height": 720
+  },
+  "maximumAgeMs": 500,
+  "simulationBadge": {
+    "x": 16,
+    "y": 16,
+    "width": 96,
+    "height": 24
+  },
+  "indicators": [
+    {
+      "signal": "left_turn",
+      "frame": {
+        "x": 816,
+        "y": 16,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "right_turn",
+      "frame": {
+        "x": 1040,
+        "y": 16,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "hazard",
+      "frame": {
+        "x": 116,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "high_beam",
+      "frame": {
+        "x": 184,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "low_beam",
+      "frame": {
+        "x": 252,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "position_lights",
+      "frame": {
+        "x": 320,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "front_fog",
+      "frame": {
+        "x": 388,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "rear_fog",
+      "frame": {
+        "x": 456,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "check_engine",
+      "frame": {
+        "x": 524,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "oil_pressure",
+      "frame": {
+        "x": 592,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "battery_charge",
+      "frame": {
+        "x": 660,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "brake_fault",
+      "frame": {
+        "x": 728,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "parking_brake",
+      "frame": {
+        "x": 796,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "abs",
+      "frame": {
+        "x": 1060,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "stability_control",
+      "frame": {
+        "x": 1128,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "traction_control",
+      "frame": {
+        "x": 1196,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "airbag",
+      "frame": {
+        "x": 1264,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "seat_belt",
+      "frame": {
+        "x": 1332,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "door_open",
+      "frame": {
+        "x": 1400,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "low_fuel",
+      "frame": {
+        "x": 1468,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "coolant_warning",
+      "frame": {
+        "x": 1536,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "washer_low",
+      "frame": {
+        "x": 1604,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "tyre_pressure",
+      "frame": {
+        "x": 1672,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    },
+    {
+      "signal": "glow_plug",
+      "frame": {
+        "x": 1740,
+        "y": 648,
+        "width": 64,
+        "height": 56
+      }
+    }
+  ]
+}

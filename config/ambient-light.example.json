@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "enabled": false,
+  "selection": "automatic",
+  "fixed_rgbw": [32, 96, 255, 0],
+  "day_brightness_permille": 300,
+  "night_brightness_permille": 60,
+  "transition_ms": 800,
+  "night_policy": "headlights",
+  "mode_colours": [
+    {"id": "comfort", "rgbw": [32, 96, 255, 0]},
+    {"id": "sport", "rgbw": [255, 32, 8, 0]},
+    {"id": "eco", "rgbw": [16, 220, 96, 0]}
+  ]
+}

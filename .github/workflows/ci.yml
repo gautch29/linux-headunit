@@ -1,0 +1,138 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+name: CI
+
+# Hosted checks only. Nothing here touches the CM5, a phone, signed Apple
+# assets or private keys; passing CI is component evidence, not qualification.
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CTEST_OUTPUT_ON_FAILURE: "1"
+  LSAN_OPTIONS: suppressions=/home/builder/src/tools/ci/lsan.supp
+
+jobs:
+  format:
+    name: Format
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check clang-format
+        run: |
+          pipx install clang-format==19.1.7
+          tools/format.sh --check
+
+  macos:
+    name: Portable (macOS)
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install dependencies
+        run: brew install ninja pkg-config libplist libarchive cairo libpng openssl@3
+      - name: Configure
+        run: |
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_OSX_DEPLOYMENT_TARGET=26.0 \
+            -DCMAKE_PREFIX_PATH="$(brew --prefix libarchive);$(brew --prefix openssl@3)"
+      - name: Build
+        run: cmake --build build -j4
+      - name: Test
+        # Shared macOS VMs stall for 100+ ms; wall-clock budget tests may retry.
+        # Linux jobs stay strict.
+        run: ctest --test-dir build -j4 --repeat until-pass:3
+
+  linux:
+    name: Linux ${{ matrix.name }}
+    runs-on: ubuntu-24.04-arm
+    container: debian:trixie
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: GCC
+            cc: gcc
+            cxx: g++
+            flags: ""
+          - name: Clang ASan+UBSan
+            cc: clang-19
+            cxx: clang++-19
+            flags: "-fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover=undefined"
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install dependencies
+        run: tools/ci/install-debian-deps.sh
+      - name: Configure
+        run: |
+          tools/ci/run-as-builder.sh cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_C_COMPILER=${{ matrix.cc }} -DCMAKE_CXX_COMPILER=${{ matrix.cxx }} \
+            -DCMAKE_C_FLAGS="${{ matrix.flags }}" -DCMAKE_CXX_FLAGS="${{ matrix.flags }}" \
+            -DCMAKE_EXE_LINKER_FLAGS="${{ matrix.flags }}" -DCMAKE_SHARED_LINKER_FLAGS="${{ matrix.flags }}" \
+            -DHEADUNIT_BUILD_THEME_VIDEO=ON
+      - name: Build
+        run: tools/ci/run-as-builder.sh cmake --build build -j4
+      - name: Test
+        run: tools/ci/run-as-builder.sh ctest --test-dir build -j4 --output-on-failure
+
+  receiver:
+    # The complete receiver (HEADUNIT_HAVE_LIVE_UI) needs the pinned Skia.
+    # Build it once per revision/args and cache it.
+    name: Full receiver (Skia, ${{ matrix.name }})
+    runs-on: ubuntu-24.04-arm
+    container: debian:trixie
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: GCC
+            cc: gcc
+            cxx: g++
+            flags: ""
+          - name: ASan
+            cc: clang-19
+            cxx: clang++-19
+            flags: "-fsanitize=address -fno-omit-frame-pointer"
+    steps:
+      - uses: actions/checkout@v5
+      - name: Install dependencies
+        run: tools/ci/install-debian-deps.sh
+      - name: Restore pinned Skia
+        id: skia-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: /opt/skia
+          key: skia-${{ runner.arch }}-${{ hashFiles('cmake/Skia.cmake', 'cmake/skia-pi.gnargs', 'tools/ci/build-skia.sh') }}
+      - name: Build pinned Skia
+        if: steps.skia-cache.outputs.cache-hit != 'true'
+        run: tools/ci/build-skia.sh /opt/skia
+      - name: Save pinned Skia
+        # Saved immediately so a later test failure does not discard the build.
+        if: steps.skia-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: /opt/skia
+          key: ${{ steps.skia-cache.outputs.cache-primary-key }}
+      - name: Configure
+        run: |
+          tools/ci/run-as-builder.sh cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+            -DCMAKE_C_COMPILER=${{ matrix.cc }} -DCMAKE_CXX_COMPILER=${{ matrix.cxx }} \
+            -DCMAKE_C_FLAGS="${{ matrix.flags }}" -DCMAKE_CXX_FLAGS="${{ matrix.flags }}" \
+            -DCMAKE_EXE_LINKER_FLAGS="${{ matrix.flags }}" -DCMAKE_SHARED_LINKER_FLAGS="${{ matrix.flags }}" \
+            -DHEADUNIT_BUILD_THEME_VIDEO=ON -DHEADUNIT_BUILD_THEME_GPU=ON \
+            -DHEADUNIT_THEME_SKIA_SOURCE=/opt/skia/src -DHEADUNIT_THEME_SKIA_BUILD=/opt/skia/out
+      - name: Build
+        run: tools/ci/run-as-builder.sh cmake --build build -j4
+      - name: Test
+        # Tests labelled "hardware" need the CM5's GPU render node.
+        run: tools/ci/run-as-builder.sh ctest --test-dir build -j4 --output-on-failure -LE hardware

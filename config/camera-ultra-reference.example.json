@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "manualActivation": true,
+  "streamIdentifier": "camera",
+  "source": {"kind": "synthetic-test-pattern"},
+  "capture": {"width": 1650, "height": 720, "frameRate": 30, "maximumAgeMs": 150},
+  "destination": {
+    "panel": "main",
+    "canvas": {"width": 1920, "height": 720},
+    "frame": {"x": 135, "y": 0, "width": 1650, "height": 720},
+    "rotationDegrees": 0,
+    "mirrorHorizontal": false
+  }
+}

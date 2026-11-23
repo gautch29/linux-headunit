@@ -1,0 +1,25 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+/build/
+/cmake-build-*/
+.DS_Store
+/captures/
+__pycache__/
+
+# Local identities and environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.pk8
+*.p7b
+
+# Local device captures and proprietary firmware downloads
+*.pcap
+*.pcapng
+*.ipsw

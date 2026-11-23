@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "experimental": true,
+  "cabin": {
+    "power": { "initial": true },
+    "ac": { "initial": true },
+    "max_ac": { "initial": false },
+    "max_defrost": { "initial": false }
+  },
+  "zones": [
+    {
+      "id": "driver",
+      "layout": "seat_front_left",
+      "temperature": {
+        "units": "celsius", "minimum": 16, "maximum": 30, "step": 0.5, "initial": 21,
+        "on": { "initial": true }
+      },
+      "fan": { "minimum": 0, "maximum": 100, "initial": 40, "on": { "initial": true }, "auto": {} },
+      "recirculation": { "on": {}, "auto": {} },
+      "power": { "on": { "initial": true } },
+      "sync": { "on": {} },
+      "defrost": { "types": ["air"], "minimum": 0, "maximum": 1, "initial": 0 },
+      "vents": { "combinations": [["upper"], ["upper", "lower"], ["lower"], ["window", "lower"]], "initial": 0, "on": { "initial": true }, "auto": {} },
+      "seat_heating_cooling": { "minimum": -3, "maximum": 3, "step": 1, "initial": 0, "on": {}, "auto": {} },
+      "seat_fan": { "minimum": 0, "maximum": 3, "initial": 0, "on": {}, "auto": {} }
+    },
+    {
+      "id": "passenger",
+      "layout": "seat_front_right",
+      "temperature": { "minimum": 16, "maximum": 30, "step": 0.5, "initial": 21, "on": { "initial": true } },
+      "seat_heating_cooling": { "minimum": 0, "maximum": 3, "initial": 0, "on": {} },
+      "seat_fan": { "minimum": 0, "maximum": 3, "initial": 0, "on": {} }
+    }
+  ],
+  "steering_wheel": { "minimum": 0, "maximum": 3, "initial": 0 }
+}

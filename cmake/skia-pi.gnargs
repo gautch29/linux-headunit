@@ -1,0 +1,42 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+is_official_build = true
+is_debug = false
+is_component_build = false
+is_trivial_abi = false
+cc = "/usr/bin/clang-19"
+cxx = "/usr/bin/clang++-19"
+ar = "/usr/bin/llvm-ar-19"
+target_cpu = "arm64"
+target_os = "linux"
+skia_enable_ganesh = true
+skia_use_gl = true
+skia_gl_standard = "gles"
+skia_use_egl = true
+skia_enable_graphite = false
+skia_use_dawn = false
+skia_use_vulkan = false
+skia_use_partition_alloc = false
+skia_use_perfetto = false
+skia_enable_tools = false
+skia_enable_pdf = false
+skia_enable_svg = false
+skia_enable_skottie = false
+skia_enable_precompile = false
+skia_use_fontconfig = false
+skia_use_freetype = false
+skia_use_harfbuzz = false
+skia_use_icu = false
+skia_use_expat = false
+skia_use_piex = false
+skia_use_libjpeg_turbo_decode = false
+skia_use_libjpeg_turbo_encode = false
+skia_use_libpng_decode = false
+skia_use_libpng_encode = false
+skia_use_libwebp_decode = false
+skia_use_libwebp_encode = false
+skia_use_wuffs = false
+skia_use_zlib = false
+skia_use_x11 = false

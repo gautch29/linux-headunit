@@ -1,0 +1,21 @@
+{
+  "scope": "44C9FA31EC:985",
+  "modes": [
+    {
+      "id": "comfort", "name": "GT",
+      "profile": {"layout": "DB7C6944-5DFF-58DF-94E9-91006781FA93", "format": "maps_media", "palette": "Blue", "accent": "99CCFF", "wallpaper": "blue", "sportScreenAvailable": false}
+    },
+    {
+      "id": "sport", "name": "Sport",
+      "profile": {"layout": "8BC9ABB1-CB20-595E-92BF-D8F099BF3515", "format": "sport", "palette": "Red", "accent": "FF6666", "wallpaper": "red", "sportScreenAvailable": true}
+    },
+    {
+      "id": "sport_plus", "name": "Sport+",
+      "profile": {"layout": "0D38B526-1271-575D-8A92-393A86B718F9", "format": "gauges", "palette": "Red", "accent": "FF8844", "wallpaper": "red", "sportScreenAvailable": true}
+    },
+    {
+      "id": "track", "name": "Track",
+      "profile": {"layout": "1B54747B-5609-52E0-A1DD-9CC8EF0B11BE", "format": "minimal", "palette": "Blue", "accent": "FFFFFF", "wallpaper": "black", "sportScreenAvailable": true}
+    }
+  ]
+}

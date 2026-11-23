@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "sections": [
+    { "id": "headunit.bench", "label": "Headunit bench", "order": 0 }
+  ],
+  "settings": [
+    {
+      "id": "headunit.bench.comfortLighting",
+      "section": "headunit.bench",
+      "label": "Comfort lighting (simulation)",
+      "kind": "boolean",
+      "initial": false,
+      "order": 0
+    }
+  ]
+}

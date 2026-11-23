@@ -1,0 +1,25 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+[Unit]
+Description=Headunit phone-free instrument cluster
+Requires=headunit-compositor.service
+Wants=headunit-outputs.service
+After=headunit-compositor.service headunit-outputs.service
+After=headunit-phone-page.service
+@VEHICLE_ORDER@
+PartOf=headunit-compositor.service
+
+[Service]
+Type=simple
+User=@USER@
+Environment=XDG_RUNTIME_DIR=/run/user/@UID@
+Environment=WAYLAND_DISPLAY=@CLUSTER_WAYLAND@
+ExecStartPre=/usr/bin/python3 @REPO@/tools/wait_wayland.py --socket @CLUSTER_WAYLAND@ --output @CLUSTER_OUTPUT@
+ExecStart=@CLUSTER_COMMAND@
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

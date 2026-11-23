@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "modes": [
+    {"id": "comfort", "assetIdentifier": "GT"},
+    {"id": "sport", "assetIdentifier": "sport"}
+  ]
+}

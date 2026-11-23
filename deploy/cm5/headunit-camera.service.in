@@ -1,0 +1,26 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+[Unit]
+Description=Headunit optional local camera view
+Requires=headunit-compositor.service
+Wants=headunit-outputs.service
+After=headunit-compositor.service headunit-outputs.service
+PartOf=headunit-compositor.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=@USER@
+Environment=XDG_RUNTIME_DIR=/run/user/@UID@
+Environment=WAYLAND_DISPLAY=@CAMERA_WAYLAND@
+ExecStartPre=/usr/bin/python3 @REPO@/tools/wait_wayland.py --socket @CAMERA_WAYLAND@ --output @CAMERA_OUTPUT@
+ExecStart=@REPO@/build/headunit-camera-wayland --camera-profile @CAMERA_PROFILE@ --display-config @CAMERA_DISPLAYS@ --request-file @CAMERA_REQUEST@ --surface-lease-file @CAMERA_LEASE@
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target

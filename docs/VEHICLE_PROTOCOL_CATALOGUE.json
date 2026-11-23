@@ -1,0 +1,4436 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-10-09",
+  "sourceRevision": "90aa0cfe59d9682b4265e1354c8b19ec3c7823ab",
+  "receiverSource": "89fb3eb",
+  "scope": "Identifier catalogue only; not an official specification, advertisement list, or phone-acceptance claim. Configuration support does not qualify an individual control. Local signed-script signals are separate from phone-facing resources.",
+  "sources": {
+    "accessories": {
+      "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFAccessoryTypes.mm",
+      "sha256": "0c0c02ff75b67026cfdd8e7cc4a84d454b814ffd1eaf22f607ed092b6f3f0502",
+      "entryCount": 34
+    },
+    "services": {
+      "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFServiceTypes.mm",
+      "sha256": "04a7bc95eeefaa7d7a4c0a7c698a4bfca1e659e89448369427bd2d4674ee5f73",
+      "entryCount": 112
+    }
+  },
+  "accessories": [
+    {
+      "name": "AudioSettings",
+      "type": "0x02000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "AutomakerApps",
+      "type": "0x01800001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "AutomakerExteriorCamera",
+      "type": "0x01300001",
+      "receiverSupport": "read_only_camera_experiment",
+      "owner": "src/theme/vehicle_configuration.cpp"
+    },
+    {
+      "name": "AutomakerInputStreams",
+      "type": "0x0C000001",
+      "receiverSupport": "read_only_camera_experiment",
+      "owner": "src/theme/vehicle_configuration.cpp"
+    },
+    {
+      "name": "AutomakerNotificationHistory",
+      "type": "0x01400001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "AutomakerNotifications",
+      "type": "0x06000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "AutomakerOverlays",
+      "type": "0x0C000002",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "AutomakerRequestContent",
+      "type": "0x01200001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "AutomakerSettings",
+      "type": "0x05000001",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp"
+    },
+    {
+      "name": "Charging",
+      "type": "0x09000008",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Climate",
+      "type": "0x01000001",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp"
+    },
+    {
+      "name": "Closure",
+      "type": "0x0D000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "DriveState",
+      "type": "0x09000003",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "DriverAssistance",
+      "type": "0x0E000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "ElectricEngine",
+      "type": "0x09000004",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "EnvironmentalConditions",
+      "type": "0x01600001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Fuel",
+      "type": "0x09000006",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "HighVoltageBattery",
+      "type": "0x09000007",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Indicators",
+      "type": "0x01900001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "InternalCombustionEngine",
+      "type": "0x09000005",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Lighting",
+      "type": "0x02100001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Media",
+      "type": "0x03000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Navigation",
+      "type": "0x0E000002",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "NowPlayingInformation",
+      "type": "0x0F000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "PairedDevices",
+      "type": "0x0B000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Seat",
+      "type": "0x01500001",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp"
+    },
+    {
+      "name": "StatusIndicators",
+      "type": "0x05100001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "TestingUseOnly",
+      "type": "0xFD000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "Tire",
+      "type": "0x0A000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "TripComputer",
+      "type": "0x04000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "UIControl",
+      "type": "0x01100001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "VehicleMotion",
+      "type": "0x09000001",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "VehicleResources",
+      "type": "0x01200002",
+      "receiverSupport": "research_only"
+    },
+    {
+      "name": "VehicleUnits",
+      "type": "0x01700001",
+      "receiverSupport": "research_only"
+    }
+  ],
+  "services": [
+    {
+      "name": "ActionRemoteNotification",
+      "type": "0x17000006",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFActionRemoteNotification.mm",
+        "sha256": "c1b897dc472b7f47e5638caee1dade53a7af123d556664ea28f0a92a40676b75",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "showsPrimaryActionHighlight",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "trailingButtonState",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          },
+          {
+            "name": "symbolNotificationUserActions",
+            "getterType": "CAFSymbolNotificationUserActionsCharacteristic"
+          },
+          {
+            "name": "trailingButton",
+            "getterType": "CAFTrailingButtonCharacteristic"
+          },
+          {
+            "name": "userAction",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000037000003",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B",
+          "0x000000003700000C",
+          "0x000000003700000D",
+          "0x0000000037000010",
+          "0x0000000037000011"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ActivityIndicator",
+      "type": "0x16100007",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFActivityIndicator.mm",
+        "sha256": "212e8514ec6886967978b2cdecd10f9dc6029ab8626ddb6f463f80dc0803c5e4",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "cameraActive",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "microphoneActive",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036100004",
+          "0x0000000036100005"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "AlertRemoteNotification",
+      "type": "0x17000007",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFAlertRemoteNotification.mm",
+        "sha256": "f8259f6c81fbfccfe7500866bded70e7ea6d6b1ec4ee5caec3a8e51e1bbc80c3",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "showsPrimaryActionHighlight",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "notificationUserActions",
+            "getterType": "CAFNotificationUserActionsCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          },
+          {
+            "name": "userAction",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000037000002",
+          "0x0000000037000003",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B",
+          "0x0000000037000010"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "AutoClimateControl",
+      "type": "0x11000008",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFAutoClimateControl.mm",
+        "sha256": "bc78d71142c0b160a70c9b31555c18bc72e8ac06f4e459062988387dae97c590",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "intensity",
+            "getterType": "CAFAutoModeIntensityCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "level",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000031000024",
+          "0x0000000031000028",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "AutomakerApp",
+      "type": "0x23000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFAutomakerApp.mm",
+        "sha256": "6f713f14e1bc15de4d83b37d3d760e2a3d12fbc905416f202cd9ba6d5cc9583f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "appClipIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000019",
+          "0x0000000070000001"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "AutomakerSettingsRemoteNotification",
+      "type": "0x1700000A",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFAutomakerSettingsRemoteNotification.mm",
+        "sha256": "29b1f96623521c1a0b0e504c071cc7ea4903ede125a73fd0c151779406be889d",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "automakerSettingsNotificationButtons",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "trailingButtonState",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          },
+          {
+            "name": "trailingButton",
+            "getterType": "CAFTrailingButtonCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B",
+          "0x000000003700000C",
+          "0x000000003700000D",
+          "0x0000000037000012"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "BatteryConditioning",
+      "type": "0x19000008",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFBatteryConditioning.mm",
+        "sha256": "c9199482a1049d12298cf96c05e1e94dd33508729704cdf5fb06bfa088009301",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "batteryConditioningState",
+            "getterType": "CAFBatteryConditioningStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x000000004000000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "BatteryLevel",
+      "type": "0x1A000006",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFBatteryLevel.mm",
+        "sha256": "e6c35268a97f9e6b6fd2c4a0afe283187830644880e001138fef1371f2295168",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "batteryLevelState",
+            "getterType": "CAFBatteryLevelStateCharacteristic"
+          },
+          {
+            "name": "batteryLevel",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "batteryLevelMarkerCriticalLow",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "batteryLevelMarkerLow",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000031",
+          "0x0000000030000035",
+          "0x000000003000004C",
+          "0x000000003000004D"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "BatteryRemainingRange",
+      "type": "0x1A000016",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFBatteryRemainingRange.mm",
+        "sha256": "31ffd9c7e76372b70a264b4badd129d3fcde24c3faa663d3ce6b153e246005c0",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "hidden",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000023"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "BatteryTemperature",
+      "type": "0x1A000011",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFBatteryTemperature.mm",
+        "sha256": "76cf463975d5402efa1df8e0ef21ac9507016920c31aa8849e97a8ce234de64a",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "temperature",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMarkerCold",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMarkerHot",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMin",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureState",
+            "getterType": "CAFTemperatureStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x000000003000001D",
+          "0x000000003000001E",
+          "0x0000000030000054",
+          "0x0000000030000055",
+          "0x0000000030000056",
+          "0x0000000030000057"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "BluetoothStatus",
+      "type": "0x16100004",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFBluetoothStatus.mm",
+        "sha256": "b5d0a407f4de60c44142975736a323a8af7f47c2fa2636bfcbf795630d7d327f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "moduleStatus",
+            "getterType": "CAFModuleStatusCharacteristic"
+          },
+          {
+            "name": "contentURLAction",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000066",
+          "0x0000000036100001"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "BooleanSetting",
+      "type": "0x16000001",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFBooleanSetting.mm",
+        "sha256": "f56bf1533be932d01a4907993636192019954646bdc70e10c3228c9e8b6d1e85",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "BOOLeanNotificationInfo",
+            "getterType": "CAFBooleanSettingNotificationEntryCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000030000005",
+          "0x0000000036000029",
+          "0x0000000036000032"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ButtonSetting",
+      "type": "0x16000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFButtonSetting.mm",
+        "sha256": "fdd4f1a4949386a329d891c3a85c5b56cae3c629071fab21cda0a01fd7054049",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "buttonAction",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "notificationInfo",
+            "getterType": "CAFSettingNotificationEntryCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000010",
+          "0x0000000036000031"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Cabin",
+      "type": "0x11000001",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFCabin.mm",
+        "sha256": "3b0df339a0d72d79575c3dfe52d5c159565e59c26b9d80d36f91075f0db0a11c",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "compressorOn",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "hvacOn",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "maxACOn",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "maxDefrostOn",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000031000002",
+          "0x0000000031000003",
+          "0x0000000031000022",
+          "0x0000000031000029"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "CameraButton",
+      "type": "0x1F000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFCameraButton.mm",
+        "sha256": "410490497f4de86a915f0ce4105c0ef3a769d262cb9959e226cffe5ed5a674f1",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "childrenIdentifiers",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "disabled",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "hidden",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "selected",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "buttonAction",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "contentURLAction",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolName",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "selectedEntryIndex",
+            "getterType": "CAFUInt8Characteristic"
+          },
+          {
+            "name": "sortOrder",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000003",
+          "0x0000000030000019",
+          "0x000000003000005E",
+          "0x0000000030000061",
+          "0x0000000032000011",
+          "0x0000000036000010",
+          "0x0000000036000023",
+          "0x0000000036000064",
+          "0x0000000036000066",
+          "0x0000000050000001"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "CameraGeneral",
+      "type": "0x1F000001",
+      "receiverSupport": "read_only_camera_experiment",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFCameraGeneral.mm",
+        "sha256": "d3a8a8756725d8ca9da356f34bdf029c5a745643b3c613787c2170a7eb293355",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "userDismissible",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000036000063"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "CellularStatus",
+      "type": "0x16100005",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFCellularStatus.mm",
+        "sha256": "27180ad65dbf3947852a335f9626150af5a525106431dd6d1982c552b6ca7133",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "cellularType",
+            "getterType": "CAFCellularTypeCharacteristic"
+          },
+          {
+            "name": "moduleStatus",
+            "getterType": "CAFModuleStatusCharacteristic"
+          },
+          {
+            "name": "contentURLAction",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "signalBars",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000066",
+          "0x0000000036100001",
+          "0x0000000036100002",
+          "0x0000000036100003"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ChargingRate",
+      "type": "0x19000003",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFChargingRate.mm",
+        "sha256": "b9bac922f9c3befdd3168446a877d89be5cd7d74a52de5affa38aa7077d0033c",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "chargingSpeed",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "power",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000028",
+          "0x000000004000000A"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ChargingStatus",
+      "type": "0x19000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFChargingStatus.mm",
+        "sha256": "db6b212315206a241180e784d4fa7da3042a2df2b6600d0820f2943f28617fcf",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "cableState",
+            "getterType": "CAFCableStateCharacteristic"
+          },
+          {
+            "name": "chargingState",
+            "getterType": "CAFChargingStateCharacteristic"
+          },
+          {
+            "name": "portSideIndicator",
+            "getterType": "CAFPortSideIndicatorCharacteristic"
+          },
+          {
+            "name": "chargingModeIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000040000005",
+          "0x0000000040000007",
+          "0x000000004000000C",
+          "0x0000000041000013"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ChargingTime",
+      "type": "0x19000007",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFChargingTime.mm",
+        "sha256": "f5c49785e304989073a5c4a17177fb991ccb5f423eb9cdb3b69c630c76d8dfb9",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "remainingTime",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000030"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ClimateControlsLocked",
+      "type": "0x11000010",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFClimateControlsLocked.mm",
+        "sha256": "7f0ed46cd09b6fcaa42d310ffb247b1dabface7dc7502b800db9687286fbff37",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "lockState",
+            "getterType": "CAFLockStateCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000065",
+          "0x0000000042000009"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ClosureState",
+      "type": "0x1D000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFClosureState.mm",
+        "sha256": "fc03e5e70c863485d4e04840c4d3104ccb55390250303fdd4119e769cd8f5a49",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "latchState",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000065",
+          "0x000000004200000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "CriticalInputStream",
+      "type": "0x1C000001",
+      "receiverSupport": "read_only_camera_experiment",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFCriticalInputStream.mm",
+        "sha256": "94c7d37720f0be10d65ab4cd837774763476aef9c5eb5535e32a025d3ba95593",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "inputStreamUID",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000044000000"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "CurrentUserStatus",
+      "type": "0x16100006",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFCurrentUserStatus.mm",
+        "sha256": "ae1999f3e7f536bbbacb63f2362c020c25158f57f6eea247ad74275ae2206b0f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "hidden",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "image",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "contentURLAction",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000036000023",
+          "0x0000000036000066",
+          "0x0000000036000068"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "CustomImageArchive",
+      "type": "0x20000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFCustomImageArchive.mm",
+        "sha256": "053d0f800ae7b8b627d4d0bb012a575bcdb4089a27ebffce9546233bb3608ef7",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000019",
+          "0x0000000048000008"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "DeepLinkSetting",
+      "type": "0x16000006",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDeepLinkSetting.mm",
+        "sha256": "e49662b588e19dfe555664cee2fbf76209b8a4c59444009f8c110f456ed2c0ad",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "notificationInfo",
+            "getterType": "CAFSettingNotificationEntryCharacteristic"
+          },
+          {
+            "name": "contentURLAction",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleValue",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000005",
+          "0x0000000030000017",
+          "0x0000000036000029",
+          "0x0000000036000031",
+          "0x0000000036000066"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "DeepLinkStatusItem",
+      "type": "0x16100002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDeepLinkStatusItem.mm",
+        "sha256": "033fca14dbb3904ee448a5c8e2b046d255d6f0c57c85907bd02222c6d903f84b",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "contentURLAction",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000066"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Defrost",
+      "type": "0x11000005",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDefrost.mm",
+        "sha256": "18c34d72b4eb29b3d73adec49a13b25683b3551da3ddb7771f310298fbf7d2f5",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "types",
+            "getterType": "CAFDefrostTypesCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "level",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000004",
+          "0x0000000031000014",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "DisplayUnits",
+      "type": "0x1F000008",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDisplayUnits.mm",
+        "sha256": "a64d636479056a2d92b00e18b4f01739bff0fc080f4efbf2058c8e7f36721a1f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "distanceUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          },
+          {
+            "name": "energyEfficiencyUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          },
+          {
+            "name": "fuelEfficiencyUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          },
+          {
+            "name": "speedUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          },
+          {
+            "name": "temperatureUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000046000001",
+          "0x0000000046000004",
+          "0x0000000046000005",
+          "0x0000000046000010",
+          "0x0000000046000011"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "DisplayedSpeed",
+      "type": "0x1A000009",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDisplayedSpeed.mm",
+        "sha256": "a2c39de6656451b79a55561f953df8cc32d775497923e740f8a0034a3e809ae8",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "showSecondarySpeed",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "speedMaxKMH",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "speedMaxMPH",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000048",
+          "0x0000000030000049",
+          "0x0000000046000002"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "DriveMode",
+      "type": "0x1A000008",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDriveMode.mm",
+        "sha256": "9c25a71a9dc6b8e4530824a2a816d8423ebcc4a239dfbb5801e2bf50caca64fb",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "hidden",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000023"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "DynamicContentElement",
+      "type": "0x1700000B",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDynamicContentElement.mm",
+        "sha256": "27d338323fa1dd6f3c9b75ab6d9bfd89a4b2a45f4fd5146bc1e15039d0cbb736",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "userDismissible",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "dynamicContentURL",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000063",
+          "0x0000000037000007",
+          "0x000000003700000B",
+          "0x0000000037000013"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "DynamicLocalNotification",
+      "type": "0x1700000D",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFDynamicLocalNotification.mm",
+        "sha256": "c71a17569aaae37912dc3346c9a22b63eefd1e65b7a9010a490b922d33fd0d84",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "userDismissible",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000036000063",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "EnergyConsumption",
+      "type": "0x1A000017",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFEnergyConsumption.mm",
+        "sha256": "c94c139486f063906581cf8afb5070bebdd359585cc2baf8f96b1010580e42d3",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "averageEnergyEfficiency",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "energyEfficiency",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "energyEfficiencyMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000035000012",
+          "0x0000000035000017",
+          "0x0000000041000021"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "EngineGaugeUI",
+      "type": "0x11100004",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFEngineGaugeUI.mm",
+        "sha256": "d2fe568d074060e1e3992eb857fb2df83b7c81c088c82c5dde867344d2ee9d26",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "uiSecondaryEngineGaugeHidden",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "uiEmphasizedEngineGauge",
+            "getterType": "CAFUIEmphasizedEngineGaugeCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000041000007",
+          "0x0000000041000008"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "EnginePower",
+      "type": "0x1A00000D",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFEnginePower.mm",
+        "sha256": "54a681614e9b694e933cb464f0d62554c01d707c65229a8b9f06edc9b99191ae",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "power",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerMarkerAvailableMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerMarkerAvailableMin",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerMin",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerState",
+            "getterType": "CAFPowerStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000028",
+          "0x0000000030000050",
+          "0x0000000030000051",
+          "0x0000000030000052",
+          "0x0000000030000053",
+          "0x0000000036000067"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "EnginePowerLevel",
+      "type": "0x1A000018",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFEnginePowerLevel.mm",
+        "sha256": "ffeb67a051f7ec19ab9ef1d949dd3955fb5ade9b574194fc68be5114bd695486",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "powerLevel",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerLevelMarkerAvailableMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerLevelMarkerAvailableMin",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "powerState",
+            "getterType": "CAFPowerStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000067",
+          "0x0000000041000022",
+          "0x0000000041000023",
+          "0x0000000041000024"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "EngineRPM",
+      "type": "0x1A00000F",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFEngineRPM.mm",
+        "sha256": "685bf5203364e40206553889c90ea5b9c937d86922f8c2983069e29cbdf28ce4",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "rotationalSpeed",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "rotationalSpeedMarkerRedline",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "rotationalSpeedMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "rotationalSpeedState",
+            "getterType": "CAFRotationalSpeedStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000024",
+          "0x000000003000004E",
+          "0x000000003000004F",
+          "0x0000000030000060"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "EngineTemperature",
+      "type": "0x1A000010",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFEngineTemperature.mm",
+        "sha256": "0d3a17a6697412a1b427bd22bba91f25513d6f405473acb2e39a97162988fbab",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "temperature",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMarkerCold",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMarkerHot",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureMin",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperatureState",
+            "getterType": "CAFTemperatureStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x000000003000001D",
+          "0x000000003000001E",
+          "0x0000000030000054",
+          "0x0000000030000055",
+          "0x0000000030000056",
+          "0x0000000030000057"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Equalizer",
+      "type": "0x13000003",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFEqualizer.mm",
+        "sha256": "bdae00c68b01687c03bf49c3134934f8c19772b77347205caebff4d76c335caf",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "type",
+            "getterType": "CAFEqualizerTypeCharacteristic"
+          },
+          {
+            "name": "value",
+            "getterType": "CAFInt8Characteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "sortOrder",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000003",
+          "0x0000000033000007",
+          "0x0000000033000008"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ExteriorConditions",
+      "type": "0x11000009",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFExteriorConditions.mm",
+        "sha256": "509afc150c82b5a7a5a6c2898058319252d2718d994dc180a05f96b160d1c47b",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "icyConditions",
+            "getterType": "CAFIcyConditionsCharacteristic"
+          },
+          {
+            "name": "aqi",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "temperature",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x000000003000001D",
+          "0x0000000031000010",
+          "0x0000000051000005"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Fan",
+      "type": "0x11000007",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFFan.mm",
+        "sha256": "b3eb2bceab4d1acd6cd313668017bebc942206f09654ea2d4446893c80ef4f02",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "autoMode",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "fanLevel",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x000000003000005F",
+          "0x0000000031000012",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "FloatSetting",
+      "type": "0x16000003",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFFloatSetting.mm",
+        "sha256": "455e6f465c51481a74ff360b29fd7e11a5592481dbd685f115e2efeb2660cc1b",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "value",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "maximumSymbolName",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "minimumSymbolName",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000006",
+          "0x0000000036000025",
+          "0x0000000036000026"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "FuelConsumption",
+      "type": "0x1A000014",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFFuelConsumption.mm",
+        "sha256": "6e57a14fd470406651c688214067d593ae8a939a4a49b7130605e7358f48f294",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "averageFuelEfficiency",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "fuelEfficiency",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "fuelEfficiencyMax",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000035000013",
+          "0x0000000035000018",
+          "0x0000000041000025"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "FuelLevel",
+      "type": "0x1A000005",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFFuelLevel.mm",
+        "sha256": "c2b54d28e2c117d57b9961afca4a89f8bdb0104f2f0ed0813a586168a94bb9fa",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "fillLevelLabel",
+            "getterType": "CAFFillLevelLabelCharacteristic"
+          },
+          {
+            "name": "fuelLevelState",
+            "getterType": "CAFFuelLevelStateCharacteristic"
+          },
+          {
+            "name": "fuelLevel",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "fuelLevelMarkerLow",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "portSideIndicator",
+            "getterType": "CAFPortSideIndicatorCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000041000002",
+          "0x0000000041000013",
+          "0x0000000041000017",
+          "0x000000004100001A",
+          "0x0000000046000007"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "FuelRemainingRange",
+      "type": "0x1A000015",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFFuelRemainingRange.mm",
+        "sha256": "fa1259f417881d5a280f4c39dcbc07d70cfc77d331ade3f741781049794b1a4b",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "hidden",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000023"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "GearRecommendation",
+      "type": "0x1A000007",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFGearRecommendation.mm",
+        "sha256": "40d405cf96d5b166ad590144c80570ebda2af17c3dc918d141150eee0ddfa37d",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "gearShiftRecommendation",
+            "getterType": "CAFInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000041000016"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "HistoricalNotification",
+      "type": "0x21000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFHistoricalNotification.mm",
+        "sha256": "4aa39d078360e53c5bd0e41d1008b018520bb48571bed75a0384ef59d0b546c8",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "hidden",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "userDismissible",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "historicalNotificationUserActions",
+            "getterType": "CAFHistoricalNotificationUserActionsCharacteristic"
+          },
+          {
+            "name": "timestamp",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "notificationSeverity",
+            "getterType": "CAFNotificationSeverityCharacteristic"
+          },
+          {
+            "name": "symbolName",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleFullDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userAction",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x000000003000005E",
+          "0x0000000036000023",
+          "0x0000000036000063",
+          "0x0000000037000003",
+          "0x0000000049000002",
+          "0x0000000049000003",
+          "0x0000000049000004",
+          "0x0000000049000005"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "IntegerSetting",
+      "type": "0x16000007",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFIntegerSetting.mm",
+        "sha256": "417a989fa744604c254c20ed33648caff3b206384a08dfeb4e2b7122d585c3a8",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "stepperBarHidden",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "value",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "maximumSymbolName",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "minimumSymbolName",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleValue",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000005",
+          "0x0000000030000010",
+          "0x0000000030000017",
+          "0x0000000036000025",
+          "0x0000000036000026",
+          "0x0000000036000027",
+          "0x0000000036000029"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "InteriorAmbientLights",
+      "type": "0x25000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFInteriorAmbientLights.mm",
+        "sha256": "0aee863c789a9260d4a4f1bfb4a1fc0c9e993a88217a710e58eb99235365269c",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "primaryColor",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "supportedColors",
+            "getterType": "CAFSupportedColorsCharacteristic"
+          },
+          {
+            "name": "brightness",
+            "getterType": "CAFUInt32Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000052000001",
+          "0x0000000052000002",
+          "0x0000000052000003"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "InteriorConditions",
+      "type": "0x11000013",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFInteriorConditions.mm",
+        "sha256": "16214632f6fec6cfda2b7f958b8afba94d80c396a4cfe2bb63acf1511aa3bb7f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "aqi",
+            "getterType": "CAFMeasurementCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000031000010"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "LocalNotification",
+      "type": "0x17000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFLocalNotification.mm",
+        "sha256": "85ee26e138098e792a4ce9ec8ada0d6f31785d488037e6558843f2689531054f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000019",
+          "0x0000000037000007",
+          "0x000000003700000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Locale",
+      "type": "0x1F000009",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFLocale.mm",
+        "sha256": "631f70bbd2bfcf38b24791fdf7e6a5d0fba794ed2291f088df3e2bc1f321dce8",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "languageIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000046000008"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "MediaSource",
+      "type": "0x14000006",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFMediaSource.mm",
+        "sha256": "525bb0aaec1ad6d0d5968b409da121bbc983c26d0c3b4fbf98f8e4cbb5279a91",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "disabled",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "mediaItemImages",
+            "getterType": "CAFMediaItemImagesCharacteristic"
+          },
+          {
+            "name": "mediaItems",
+            "getterType": "CAFMediaItemsCharacteristic"
+          },
+          {
+            "name": "mediaSourceSemanticType",
+            "getterType": "CAFMediaSourceSemanticTypeCharacteristic"
+          },
+          {
+            "name": "currentMediaItemIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "currentFrequency",
+            "getterType": "CAFUInt32Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000019",
+          "0x0000000032000007",
+          "0x0000000032000011",
+          "0x0000000032000012",
+          "0x0000000032000025",
+          "0x0000000032000026",
+          "0x0000000032000031"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "MinimalRemoteNotification",
+      "type": "0x17000005",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFMinimalRemoteNotification.mm",
+        "sha256": "95396d7ec9c0d3ad67bd378dd39b503f87944024dcf41a9e8f6e3ee501612b80",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "trailingButtonState",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          },
+          {
+            "name": "trailingButton",
+            "getterType": "CAFTrailingButtonCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B",
+          "0x000000003700000C",
+          "0x000000003700000D"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "MinimumChargingLevel",
+      "type": "0x1900000A",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFMinimumChargingLevel.mm",
+        "sha256": "030bdac0cfc9874b8b5e34100b68d2402ce09422e1268859b73c92f3d760d8ba",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "MultiSelectRemoteNotification",
+      "type": "0x17000008",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFMultiSelectRemoteNotification.mm",
+        "sha256": "1fea811b0b25e970ecca0d06ec9e7f390845b395fe22561c5abc68a701ac9a96",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "selectedEntryIndices",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "trailingButtonState",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "selectableNotificationEntries",
+            "getterType": "CAFSelectableNotificationEntryListCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          },
+          {
+            "name": "trailingButton",
+            "getterType": "CAFTrailingButtonCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000036000062",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B",
+          "0x000000003700000C",
+          "0x000000003700000D",
+          "0x000000003700000F"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "MultipleSelectImageSetting",
+      "type": "0x16000017",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFMultipleSelectImageSetting.mm",
+        "sha256": "e6dc9706c4543484351728dc2a6a7b8682a3e682512cd68810e4c01478bedd25",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "images",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "indicesUserVisibleValue",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "listUserVisibleValue",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000005",
+          "0x0000000030000018",
+          "0x0000000036000007",
+          "0x0000000036000009",
+          "0x0000000036000029"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "MultipleSelectSetting",
+      "type": "0x16000005",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFMultipleSelectSetting.mm",
+        "sha256": "7d16b31094f569eaf89451e26f4db7ee0a84c1de79b819a072adcd7938b5fb06",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "selectedEntryIndices",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "selectSettingEntryList",
+            "getterType": "CAFSelectSettingEntryListCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000005",
+          "0x0000000036000024",
+          "0x0000000036000029",
+          "0x0000000036000062"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "NowPlaying",
+      "type": "0x14000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFNowPlaying.mm",
+        "sha256": "8946e41245f01bc7830bb87fc4a532b1f11168644dcdd94b79755bfa15e3c8e2",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "audioContentBadge",
+            "getterType": "CAFAudioContentBadgeCharacteristic"
+          },
+          {
+            "name": "artwork",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "jumpBackwardInterval",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "jumpForwardInterval",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "playbackState",
+            "getterType": "CAFPlaybackStateCharacteristic"
+          },
+          {
+            "name": "album",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "artist",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "currentMediaSourceIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "title",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x000000000F000032",
+          "0x000000000F000033",
+          "0x000000000F000034",
+          "0x000000000F000035",
+          "0x000000000F000036",
+          "0x000000000F000037",
+          "0x000000000F000038",
+          "0x000000000F000039",
+          "0x000000000F000040",
+          "0x000000000F00004A",
+          "0x000000000F00004B",
+          "0x000000000F00004C",
+          "0x000000000F00004D",
+          "0x000000000F00004E",
+          "0x0000000030000005",
+          "0x0000000032000003",
+          "0x0000000032000004",
+          "0x0000000032000005",
+          "0x0000000032000020",
+          "0x0000000032000023",
+          "0x0000000032000032",
+          "0x0000000032000033",
+          "0x0000000032000034",
+          "0x0000000032000035"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Odometer",
+      "type": "0x1A00000A",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFOdometer.mm",
+        "sha256": "eccd978795af1b208c7df1f0bed1bacb0c0a452ce3a8690092033e68db9f97d8",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "OverlayView",
+      "type": "0x16200001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFOverlayView.mm",
+        "sha256": "1817da99886a7aaa1577e19d750160d9d8913a659c4e8fed87e04b86bfa11246",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "height",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "originX",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "originY",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "width",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000030000019",
+          "0x000000003600006A",
+          "0x000000003600006B",
+          "0x000000003600006C",
+          "0x000000003600006D",
+          "0x0000000037000007"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "PairedDevicesAction",
+      "type": "0x16000019",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFPairedDevicesAction.mm",
+        "sha256": "4ea174353edb8bdc745237b93e517a59718598f8b050eea8582ac117f2e2cc36",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [
+          "0x000000003600001A",
+          "0x000000003600001B",
+          "0x000000003600001C"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "PairedDevicesInformation",
+      "type": "0x16000018",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFPairedDevicesInformation.mm",
+        "sha256": "d2fec20e3c2f5ec8f157de27117844080f094c6275a7e929e4878703283f5f54",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "pairedDeviceList",
+            "getterType": "CAFPairedDeviceListCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000013"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Picker",
+      "type": "0x17000003",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFPicker.mm",
+        "sha256": "756baa1d1d913a1aea48aff8a7a28861f98b2ccae533d466e5f60e8762ff4159",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "userSelectionEnabled",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "entryList",
+            "getterType": "CAFEntryListCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "selectedEntryIndex",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000019",
+          "0x000000003000005D",
+          "0x0000000030000061",
+          "0x0000000037000007",
+          "0x000000003700000A",
+          "0x000000003700000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ProtocolPerfTest",
+      "type": "0xFE000006",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFProtocolPerfTest.mm",
+        "sha256": "c517797ea02503e230362dfa9265642eea83057515fdf3fc67900a2771bc2965",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "testInt16",
+            "getterType": "CAFInt16Characteristic"
+          },
+          {
+            "name": "testInt32",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "testString2",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "testString",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "testUInt16",
+            "getterType": "CAFUInt16Characteristic"
+          },
+          {
+            "name": "testUInt32",
+            "getterType": "CAFUInt32Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x00000000FF000003",
+          "0x00000000FF000004",
+          "0x00000000FF000007",
+          "0x00000000FF000008",
+          "0x00000000FF00000B",
+          "0x00000000FF000023"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ProximityAlerts",
+      "type": "0x24000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFProximityAlerts.mm",
+        "sha256": "9edee676db855278af7c34894afef76933fc9475ddade72b74b2e83c55a4371f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "proximityAlertRearLeft",
+            "getterType": "CAFProximityAlertCharacteristic"
+          },
+          {
+            "name": "proximityAlertRearRight",
+            "getterType": "CAFProximityAlertCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000051000003",
+          "0x0000000051000004"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Recirculation",
+      "type": "0x11000011",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFRecirculation.mm",
+        "sha256": "729af0d29718d277a507fb02b1876a58edd5e358c84f06fbe1b188426b6ca6c2",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "autoMode",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x000000003000005F"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "RemainingRange",
+      "type": "0x1A00000B",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFRemainingRange.mm",
+        "sha256": "89e92fd012c4b2bf19483d651f0328017de558fcec3b4008979691a6ccc7e8b9",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "hidden",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000023"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "RemoteNotification",
+      "type": "0x17000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFRemoteNotification.mm",
+        "sha256": "00ebc30b0ad7a34711b4d6e62a813050804d8e0c15f4999ae97b57c3b69647c8",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "notificationUserActions",
+            "getterType": "CAFNotificationUserActionsCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          },
+          {
+            "name": "userAction",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000037000002",
+          "0x0000000037000003",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "RequestContent",
+      "type": "0x17000004",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFRequestContent.mm",
+        "sha256": "424260a09a4fd61dd4b3cc7aa337c06067fce48af44f1749d14fb67678300951",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "userDismissible",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "contentURL",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000030000007",
+          "0x0000000036000063",
+          "0x0000000037000007",
+          "0x000000003700000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "RequestTemporaryContent",
+      "type": "0x1700000C",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFRequestTemporaryContent.mm",
+        "sha256": "6000f9997c1bc903ed859b99e3ac0d6346cd3e71d56ccd960ee0d041675d632a",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "temporaryContentURL",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000036000069",
+          "0x0000000037000007",
+          "0x000000003700000B"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Route",
+      "type": "0x1E000101",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFRoute.mm",
+        "sha256": "cee40550a9a9d6e7443f2d1562c3c539b5fb67712290e6753290c433330d902f",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "applicationEnabled",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "userEnabled",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "vehicleEnabled",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "geodeticSystem",
+            "getterType": "CAFGeodeticSystemCharacteristic"
+          },
+          {
+            "name": "destination",
+            "getterType": "CAFPointOfInterestCharacteristic"
+          },
+          {
+            "name": "origin",
+            "getterType": "CAFPointOfInterestCharacteristic"
+          },
+          {
+            "name": "legs",
+            "getterType": "CAFRouteLegsCharacteristic"
+          },
+          {
+            "name": "routeState",
+            "getterType": "CAFRouteStateCharacteristic"
+          },
+          {
+            "name": "userVisibleApplicationName",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000045000101",
+          "0x0000000045000102",
+          "0x0000000045000103",
+          "0x0000000045000104",
+          "0x0000000045000105",
+          "0x0000000045000106",
+          "0x0000000045000107",
+          "0x0000000045000108",
+          "0x0000000045000109"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SeatBelt",
+      "type": "0x22000004",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSeatBelt.mm",
+        "sha256": "82e9bedaca7dcf650e2762f9e5fe505d6eb7bbe5fa330a8c81ffd760c485425c",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "buckleState",
+            "getterType": "CAFLockStateCharacteristic"
+          },
+          {
+            "name": "seatBeltIndicator",
+            "getterType": "CAFSeatBeltIndicatorCharacteristic"
+          },
+          {
+            "name": "seatOccupancy",
+            "getterType": "CAFSeatOccupancyCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000065",
+          "0x0000000060000002",
+          "0x0000000060000006",
+          "0x0000000060000007"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SeatFan",
+      "type": "0x22000002",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSeatFan.mm",
+        "sha256": "2ac2e572956a289ba2a4df27f3f40c8db2057cf04915e3ba1020d6170194c04d",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "autoMode",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "fanLevel",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x000000003000005F",
+          "0x0000000031000012",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SeatHeatingCooling",
+      "type": "0x22000001",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSeatHeatingCooling.mm",
+        "sha256": "45ea89ed931ebd07f4dfee73d121b372f9e0488d181c42e389be275df6729661",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "autoMode",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "heatingCoolingLevel",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x000000003000005F",
+          "0x0000000031000021",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SettingsSection",
+      "type": "0x16000020",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSettingsSection.mm",
+        "sha256": "2baaa8fd79d5ab67933250dac6b8adf65eabf4d6cb09e16812a1b8c2d3603fcb",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleFooter",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleSectionName",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "sortOrder",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000003",
+          "0x0000000030000016",
+          "0x0000000030000019",
+          "0x0000000036000004"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SingleSelectImageSetting",
+      "type": "0x16000016",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSingleSelectImageSetting.mm",
+        "sha256": "f567e04401ccfc5bc35d6532e97c3d0f0deac8c738103c3c73e0082169e1e2c7",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "images",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "listUserVisibleValue",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "currentUserVisibleValue",
+            "getterType": "CAFUInt8Characteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000005",
+          "0x0000000030000018",
+          "0x0000000036000007",
+          "0x0000000036000008",
+          "0x0000000036000029"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SingleSelectRemoteNotification",
+      "type": "0x17000009",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSingleSelectRemoteNotification.mm",
+        "sha256": "6fd390b88ef345f8b621b701853d4e11bb64b04c30c0e4654c132af30f3736db",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "trailingButtonState",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "selectableNotificationEntries",
+            "getterType": "CAFSelectableNotificationEntryListCharacteristic"
+          },
+          {
+            "name": "displayPanelIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "displayZoneIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "identifier",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "symbolNameAndColor",
+            "getterType": "CAFSymbolImageWithColorCharacteristic"
+          },
+          {
+            "name": "trailingButton",
+            "getterType": "CAFTrailingButtonCharacteristic"
+          },
+          {
+            "name": "selectedEntryIndex",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000005",
+          "0x0000000030000019",
+          "0x0000000030000061",
+          "0x0000000037000007",
+          "0x0000000037000008",
+          "0x000000003700000B",
+          "0x000000003700000C",
+          "0x000000003700000D",
+          "0x000000003700000F"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SingleSelectSetting",
+      "type": "0x16000004",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSingleSelectSetting.mm",
+        "sha256": "5ea57aa2dc489c39c76bee7e4535b4ed6b968f8f902ac19dce62b2999dfc75e5",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "selectSettingEntryList",
+            "getterType": "CAFSelectSettingEntryListCharacteristic"
+          },
+          {
+            "name": "selectSettingEntryListNotificationInfo",
+            "getterType": "CAFSelectSettingNotificationEntryListCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "selectedEntryIndex",
+            "getterType": "CAFUInt8Characteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000005",
+          "0x0000000030000061",
+          "0x0000000036000024",
+          "0x0000000036000029",
+          "0x0000000036000033"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SoundDistribution",
+      "type": "0x13000005",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSoundDistribution.mm",
+        "sha256": "d8a87d272b6f12d89007bc144448dd66f7aaab33874a77cf8707eb9b9edb8859",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "balance",
+            "getterType": "CAFInt8Characteristic"
+          },
+          {
+            "name": "fade",
+            "getterType": "CAFInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000033000002",
+          "0x0000000033000003"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "StaticSetting",
+      "type": "0x16000015",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFStaticSetting.mm",
+        "sha256": "1f5abc02ba17f7bb41ab1528f34e810132d36fb202f76db0d430c3dbd7d6a639",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "childrenSettingsIdentifiers",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "userVisibleDescription",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleValue",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleDetailedDescription",
+            "getterType": "CAFUserVisibleDetailedDescriptionCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000005",
+          "0x0000000030000017",
+          "0x0000000036000012",
+          "0x0000000036000029"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "StatusItem",
+      "type": "0x16100001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFStatusItem.mm",
+        "sha256": "9093c134bb1ae3e5b71fd57fee8f9dbe956f24d9dd19c2a8b0af29ff50c4e34e",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "SteeringWheelHeatingCooling",
+      "type": "0x11000003",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFSteeringWheelHeatingCooling.mm",
+        "sha256": "e4d4e15b82af6be7355bc1134ed170faa48ddbfa6c099e15d0f1696cc3e189cd",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "autoMode",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "heatingCoolingLevel",
+            "getterType": "CAFInt32Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x000000003000005F",
+          "0x0000000031000021"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TargetChargingLevel",
+      "type": "0x19000009",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTargetChargingLevel.mm",
+        "sha256": "b559f348456f729b0f6f396329fb436f82d49ca31680a792b10a8f5c03b1f10e",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TargetSpeed",
+      "type": "0x1E000004",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTargetSpeed.mm",
+        "sha256": "f74433e2ff4a0d93ee68c5ee2b6026912f1bd20a9dde07e180269b098398fe73",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "speedLimited",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "speedKMH",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "speedMPH",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "targetSpeedState",
+            "getterType": "CAFTargetSpeedStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000046",
+          "0x0000000030000047",
+          "0x0000000045000005",
+          "0x000000004500001C"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Temperature",
+      "type": "0x11000002",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTemperature.mm",
+        "sha256": "c68ee593b75ed2a47d179b00507cb422a83ac5c857caa6cddd3205950eaea125",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "currentTemperature",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "targetTemperature",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000031000017",
+          "0x0000000031000019",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TemperatureLevel",
+      "type": "0x11000015",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTemperatureLevel.mm",
+        "sha256": "dc1d7c7fe495d7a6adbd02e11e04800d910ba2c39ad551a0b653c14dc902b850",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "heatingCoolingLevel",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000031000021",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TestControlAsync",
+      "type": "0xFE000009",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTestControlAsync.mm",
+        "sha256": "25092c117205d3954efdd015eed040a06ef80aa1626e8958344f72153597bc8d",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [
+          "0x00000000FF000028",
+          "0x00000000FF000029",
+          "0x00000000FF00002A",
+          "0x00000000FF00002B",
+          "0x00000000FF00002E",
+          "0x00000000FF00002F",
+          "0x00000000FF000030",
+          "0x00000000FF000031"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TestControlEvent",
+      "type": "0xFE00000A",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTestControlEvent.mm",
+        "sha256": "86d4d4666111aeb3d1c7f47ee3ecb05a14a450be453791dda031fd0299bd8f29",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [
+          "0x00000000FF00002C",
+          "0x00000000FF00002D",
+          "0x00000000FF000032",
+          "0x00000000FF000033"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TestControlSync",
+      "type": "0xFE000008",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTestControlSync.mm",
+        "sha256": "3d47bb7aa703ee4762adbca6097cd3eeb83493e64fcbddedbbb2107146f4fade",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [
+          "0x00000000FF000028",
+          "0x00000000FF000029",
+          "0x00000000FF00002A",
+          "0x00000000FF00002B",
+          "0x00000000FF00002E",
+          "0x00000000FF00002F",
+          "0x00000000FF000030",
+          "0x00000000FF000031"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TirePressure",
+      "type": "0x1B000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTirePressure.mm",
+        "sha256": "ec37471ce1f473ee6beabfa4811426653626eba0ad64dd6fdea990717e1a7630",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "pressure",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "pressureState",
+            "getterType": "CAFPressureStateCharacteristic"
+          },
+          {
+            "name": "sensorState",
+            "getterType": "CAFSensorStateCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x000000003000001A",
+          "0x000000003000001B",
+          "0x000000003000001C",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TirePressureMonitoringSystem",
+      "type": "0x1B000006",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTirePressureMonitoringSystem.mm",
+        "sha256": "8340d62fa83f9b528253e1d90b8fa82eb2220d9b606d05f26331d6d957548203",
+        "declaredCharacteristicAccessors": [],
+        "characteristicTypeLiterals": [
+          "0x0000000030000062"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TransmissionStatus",
+      "type": "0x1A000003",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTransmissionStatus.mm",
+        "sha256": "a99e30b28b604907bc4d001fe238ff727d3b4939692a67df363cefaf4528d0ce",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "transmissionMode",
+            "getterType": "CAFTransmissionModeCharacteristic"
+          },
+          {
+            "name": "gearPosition",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000041000011",
+          "0x0000000041000012"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Trip",
+      "type": "0x15000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTrip.mm",
+        "sha256": "66d1a29f553a031998e74a2142764a9864c669c094fd0a8eacd17171337c4eb2",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "showOdometer",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "averageSpeed",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "distance",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "duration",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "energy",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "energyEfficiency",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "fuelEfficiency",
+            "getterType": "CAFMeasurementCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "sortOrder",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000030000003",
+          "0x0000000030000022",
+          "0x0000000030000023",
+          "0x0000000030000025",
+          "0x0000000030000045",
+          "0x0000000030000062",
+          "0x0000000035000012",
+          "0x0000000035000013",
+          "0x0000000035000016"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TurnSignals",
+      "type": "0x24000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTurnSignals.mm",
+        "sha256": "cf7064b9cff02369731a73f3f7de92dee9c78fcbf8a17aa6342197232f0ad375",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "turnSignalLeft",
+            "getterType": "CAFTurnSignalCharacteristic"
+          },
+          {
+            "name": "turnSignalRight",
+            "getterType": "CAFTurnSignalCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000051000001",
+          "0x0000000051000002"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TypeTest",
+      "type": "0xFE000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTypeTest.mm",
+        "sha256": "c84cf1be94c4ef7fd939273c3c8ed15d8116158287b1d40763e46909c1a1ed90",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "testArrayBool",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayData",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayFloat",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt16",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt32",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt64",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt8",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayRawData",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayString",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt16",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt32",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt64",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt8",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testBool",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "testEnum",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "testData",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "testRawData",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "testFloat",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "testInt16",
+            "getterType": "CAFInt16Characteristic"
+          },
+          {
+            "name": "testInt32",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "testInt64",
+            "getterType": "CAFInt64Characteristic"
+          },
+          {
+            "name": "testInt8",
+            "getterType": "CAFInt8Characteristic"
+          },
+          {
+            "name": "testString",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "testComplexArrayItemValue",
+            "getterType": "CAFTestComplexArrayItemCharacteristic"
+          },
+          {
+            "name": "testComplexItem",
+            "getterType": "CAFTestComplexItemCharacteristic"
+          },
+          {
+            "name": "testComplexItemValue",
+            "getterType": "CAFTestComplexItemCharacteristic"
+          },
+          {
+            "name": "testComplexItemList",
+            "getterType": "CAFTestComplexItemsCharacteristic"
+          },
+          {
+            "name": "testComplexItems",
+            "getterType": "CAFTestComplexItemsCharacteristic"
+          },
+          {
+            "name": "testComplexNestedItemValue",
+            "getterType": "CAFTestComplexNestedItemCharacteristic"
+          },
+          {
+            "name": "testComplexNestedItemList",
+            "getterType": "CAFTestComplexNestedItemsCharacteristic"
+          },
+          {
+            "name": "testComplexNestedListItemValue",
+            "getterType": "CAFTestComplexNestedListItemCharacteristic"
+          },
+          {
+            "name": "testUInt16",
+            "getterType": "CAFUInt16Characteristic"
+          },
+          {
+            "name": "testUInt32",
+            "getterType": "CAFUInt32Characteristic"
+          },
+          {
+            "name": "testUInt64",
+            "getterType": "CAFUInt64Characteristic"
+          },
+          {
+            "name": "testUInt8",
+            "getterType": "CAFUInt8Characteristic"
+          },
+          {
+            "name": "testDimensionUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x00000000FF000001",
+          "0x00000000FF000002",
+          "0x00000000FF000003",
+          "0x00000000FF000004",
+          "0x00000000FF000005",
+          "0x00000000FF000006",
+          "0x00000000FF000007",
+          "0x00000000FF000008",
+          "0x00000000FF000009",
+          "0x00000000FF00000A",
+          "0x00000000FF00000B",
+          "0x00000000FF00000C",
+          "0x00000000FF00000D",
+          "0x00000000FF00000E",
+          "0x00000000FF00000F",
+          "0x00000000FF000010",
+          "0x00000000FF000011",
+          "0x00000000FF000012",
+          "0x00000000FF000013",
+          "0x00000000FF000014",
+          "0x00000000FF000015",
+          "0x00000000FF000016",
+          "0x00000000FF000017",
+          "0x00000000FF000018",
+          "0x00000000FF000019",
+          "0x00000000FF00001A",
+          "0x00000000FF00001B",
+          "0x00000000FF00001C",
+          "0x00000000FF00001D",
+          "0x00000000FF000020",
+          "0x00000000FF000021",
+          "0x00000000FF000022",
+          "0x00000000FF000024",
+          "0x00000000FF000025",
+          "0x00000000FF000026",
+          "0x00000000FF000027"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TypeTestIndexByPosition",
+      "type": "0xFE000004",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTypeTestIndexByPosition.mm",
+        "sha256": "b19d40a3aa036204985cc9b12eefe414e76a072c3be17f932428bf3cd276b2b5",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "testInt32",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000065",
+          "0x00000000FF000008"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TypeTestIndexByUnit",
+      "type": "0xFE000005",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTypeTestIndexByUnit.mm",
+        "sha256": "444477e10f08a9d4ce5df29523956fce861d6be031e5c339938c847d2fb511e4",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "testInt32",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "distanceUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000046000004",
+          "0x00000000FF000008"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TypeTestMulti",
+      "type": "0xFE000003",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTypeTestMulti.mm",
+        "sha256": "d22cdf8d9cd57f881217f5c3cbb39fcf0168f3df24940d2526aa5e9f332d64a9",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "testArrayBool",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayData",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayFloat",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt16",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt32",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt64",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt8",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayRawData",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayString",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt16",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt32",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt64",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt8",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testBool",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "testEnum",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "testData",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "testRawData",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "testFloat",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "testInt16",
+            "getterType": "CAFInt16Characteristic"
+          },
+          {
+            "name": "testInt32",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "testInt64",
+            "getterType": "CAFInt64Characteristic"
+          },
+          {
+            "name": "testInt8",
+            "getterType": "CAFInt8Characteristic"
+          },
+          {
+            "name": "testString",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "testComplexItem",
+            "getterType": "CAFTestComplexItemCharacteristic"
+          },
+          {
+            "name": "testComplexItemValue",
+            "getterType": "CAFTestComplexItemCharacteristic"
+          },
+          {
+            "name": "testComplexItemList",
+            "getterType": "CAFTestComplexItemsCharacteristic"
+          },
+          {
+            "name": "testComplexItems",
+            "getterType": "CAFTestComplexItemsCharacteristic"
+          },
+          {
+            "name": "testUInt16",
+            "getterType": "CAFUInt16Characteristic"
+          },
+          {
+            "name": "testUInt32",
+            "getterType": "CAFUInt32Characteristic"
+          },
+          {
+            "name": "testUInt64",
+            "getterType": "CAFUInt64Characteristic"
+          },
+          {
+            "name": "testUInt8",
+            "getterType": "CAFUInt8Characteristic"
+          },
+          {
+            "name": "testDimensionUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x00000000FF000001",
+          "0x00000000FF000002",
+          "0x00000000FF000003",
+          "0x00000000FF000004",
+          "0x00000000FF000005",
+          "0x00000000FF000006",
+          "0x00000000FF000007",
+          "0x00000000FF000008",
+          "0x00000000FF000009",
+          "0x00000000FF00000A",
+          "0x00000000FF00000B",
+          "0x00000000FF00000C",
+          "0x00000000FF00000D",
+          "0x00000000FF00000E",
+          "0x00000000FF00000F",
+          "0x00000000FF000010",
+          "0x00000000FF000011",
+          "0x00000000FF000012",
+          "0x00000000FF000013",
+          "0x00000000FF000014",
+          "0x00000000FF000015",
+          "0x00000000FF000016",
+          "0x00000000FF000017",
+          "0x00000000FF000018",
+          "0x00000000FF000019",
+          "0x00000000FF00001A",
+          "0x00000000FF00001B",
+          "0x00000000FF00001C",
+          "0x00000000FF00001D",
+          "0x00000000FF000020",
+          "0x00000000FF000021",
+          "0x00000000FF000022"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "TypeTestWithStates",
+      "type": "0xFE000007",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFTypeTestWithStates.mm",
+        "sha256": "da7c0addaaa22fe3f2cb0f2633c2ee58eb37600b91676a3a216100a1287474f8",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "testArrayBool",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayData",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayFloat",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt16",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt32",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt64",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayInt8",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayRawData",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayString",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt16",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt32",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt64",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testArrayUInt8",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "testBool",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "testEnum",
+            "getterType": "CAFButtonActionCharacteristic"
+          },
+          {
+            "name": "testData",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "testRawData",
+            "getterType": "CAFDataCharacteristic"
+          },
+          {
+            "name": "testFloat",
+            "getterType": "CAFFloatCharacteristic"
+          },
+          {
+            "name": "testInt16",
+            "getterType": "CAFInt16Characteristic"
+          },
+          {
+            "name": "testInt32",
+            "getterType": "CAFInt32Characteristic"
+          },
+          {
+            "name": "testInt64",
+            "getterType": "CAFInt64Characteristic"
+          },
+          {
+            "name": "testInt8",
+            "getterType": "CAFInt8Characteristic"
+          },
+          {
+            "name": "testString",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "testComplexItem",
+            "getterType": "CAFTestComplexItemCharacteristic"
+          },
+          {
+            "name": "testComplexItemValue",
+            "getterType": "CAFTestComplexItemCharacteristic"
+          },
+          {
+            "name": "testComplexItemList",
+            "getterType": "CAFTestComplexItemsCharacteristic"
+          },
+          {
+            "name": "testComplexItems",
+            "getterType": "CAFTestComplexItemsCharacteristic"
+          },
+          {
+            "name": "testUInt16",
+            "getterType": "CAFUInt16Characteristic"
+          },
+          {
+            "name": "testUInt32",
+            "getterType": "CAFUInt32Characteristic"
+          },
+          {
+            "name": "testUInt64",
+            "getterType": "CAFUInt64Characteristic"
+          },
+          {
+            "name": "testUInt8",
+            "getterType": "CAFUInt8Characteristic"
+          },
+          {
+            "name": "testDimensionUnitRawValue",
+            "getterType": "CAFUnitTypeCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x00000000FF000001",
+          "0x00000000FF000002",
+          "0x00000000FF000003",
+          "0x00000000FF000004",
+          "0x00000000FF000005",
+          "0x00000000FF000006",
+          "0x00000000FF000007",
+          "0x00000000FF000008",
+          "0x00000000FF000009",
+          "0x00000000FF00000A",
+          "0x00000000FF00000B",
+          "0x00000000FF00000C",
+          "0x00000000FF00000D",
+          "0x00000000FF00000E",
+          "0x00000000FF00000F",
+          "0x00000000FF000010",
+          "0x00000000FF000011",
+          "0x00000000FF000012",
+          "0x00000000FF000013",
+          "0x00000000FF000014",
+          "0x00000000FF000015",
+          "0x00000000FF000016",
+          "0x00000000FF000017",
+          "0x00000000FF000018",
+          "0x00000000FF000019",
+          "0x00000000FF00001A",
+          "0x00000000FF00001B",
+          "0x00000000FF00001C",
+          "0x00000000FF00001D",
+          "0x00000000FF000020",
+          "0x00000000FF000021",
+          "0x00000000FF000022"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "UIAppearance",
+      "type": "0x11100003",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFUIAppearance.mm",
+        "sha256": "daad1fc404df0e99e76dfdcde895ed8fd6789a4875ac4f20261ec2a1227d755c",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "appearanceMode",
+            "getterType": "CAFAppearanceModeCharacteristic"
+          },
+          {
+            "name": "nightMode",
+            "getterType": "CAFBoolCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000047000005",
+          "0x0000000047000006"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "UIConfiguration",
+      "type": "0x11100005",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFUIConfiguration.mm",
+        "sha256": "ddffbaba2810dc2f760b7566dfc6dac0c0a99eee71e5a696567159e5feadb0c1",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "configurationOptions",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "configurationIdentifier",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000047000011",
+          "0x0000000048000010"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "UIInputDeviceButton",
+      "type": "0x11100002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFUIInputDeviceButton.mm",
+        "sha256": "b5fc4366aec01d89d1e8f2a797b3b8eb1afe39abf92b03c8a78d4216d505c862",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "uiInputDeviceButtonEvent",
+            "getterType": "CAFUIInputDeviceButtonEventCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000047000003"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "UIState",
+      "type": "0x11100001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFUIState.mm",
+        "sha256": "21edd8dce8e9b14e08e05098e3994a39c34830e30f485d502a83c76b4129c746",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "uiSceneOptions",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "driverSide",
+            "getterType": "CAFDriverSideCharacteristic"
+          },
+          {
+            "name": "uiSceneState",
+            "getterType": "CAFUISceneStateCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000041000009",
+          "0x0000000047000001",
+          "0x0000000047000004"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "VehicleInformation",
+      "type": "0x1A000013",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFVehicleInformation.mm",
+        "sha256": "956fb563dc456a2f24814199c4f46cd06ce4c477437dfa4f5292c06219ac6411",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "vehicleUserVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000041000020"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "VehicleVariant",
+      "type": "0x20000001",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFVehicleVariant.mm",
+        "sha256": "0225615304b6fa5a702eeebdb6c0c58994c7df15587a422863e08d672c97166d",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "audioLogo",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "exteriorStyle",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "interiorStyle",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "vehicleLayout",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "vehicleLogo",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000048000003",
+          "0x0000000048000004",
+          "0x0000000048000005",
+          "0x0000000048000006",
+          "0x0000000048000007"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Vent",
+      "type": "0x11000006",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFVent.mm",
+        "sha256": "37bfc4a1c406af49642122f118236b9fa57bd51f32a52a65311f24508b3bdbbb",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "combinations",
+            "getterType": "CAFArrayCharacteristic"
+          },
+          {
+            "name": "autoMode",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "currentIndex",
+            "getterType": "CAFUInt32Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000030000038",
+          "0x000000003000005F",
+          "0x0000000031000025",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "Volume",
+      "type": "0x13000002",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFVolume.mm",
+        "sha256": "dfc385db4e2c7dd7201f571c181a7ce21040b28a4eff1a343ac48abfeb8c301d",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "mute",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "userVisibleLabel",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "volume",
+            "getterType": "CAFUInt8Characteristic"
+          },
+          {
+            "name": "volumeType",
+            "getterType": "CAFVolumeTypeCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000001",
+          "0x0000000033000005",
+          "0x0000000033000006",
+          "0x0000000033000009"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "WiFiStatus",
+      "type": "0x16100003",
+      "receiverSupport": "research_only",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFWiFiStatus.mm",
+        "sha256": "afc051959aa44c346f63313a078aa390ced224098df8fb5519fe40c648727d08",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "moduleStatus",
+            "getterType": "CAFModuleStatusCharacteristic"
+          },
+          {
+            "name": "contentURLAction",
+            "getterType": "CAFStringCharacteristic"
+          },
+          {
+            "name": "signalBars",
+            "getterType": "CAFUInt8Characteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000036000066",
+          "0x0000000036100001",
+          "0x0000000036100002"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ZoneOn",
+      "type": "0x11000014",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFZoneOn.mm",
+        "sha256": "175549d96f7e91572823bf6cfce38088c22481510d5791172e6df75f063c4e66",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    },
+    {
+      "name": "ZonesSynced",
+      "type": "0x11000012",
+      "receiverSupport": "configuration_builder",
+      "owner": "src/theme/vehicle_configuration.cpp",
+      "frameworkClassFacts": {
+        "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFZonesSynced.mm",
+        "sha256": "2ed7d05fa01690689341f32a780a359cc18d470c770fcaa8b19be9914feb69ef",
+        "declaredCharacteristicAccessors": [
+          {
+            "name": "on",
+            "getterType": "CAFBoolCharacteristic"
+          },
+          {
+            "name": "vehicleLayoutKey",
+            "getterType": "CAFStringCharacteristic"
+          }
+        ],
+        "characteristicTypeLiterals": [
+          "0x0000000030000002",
+          "0x0000000036000065"
+        ],
+        "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+      }
+    }
+  ],
+  "sharedFrameworkClassFacts": {
+    "ModeItems": {
+      "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFModeItems.mm",
+      "sha256": "778f337c456be12d378830a8420827a62f5a5acef940a06775f8a2a993104c98",
+      "declaredCharacteristicAccessors": [
+        {
+          "name": "identifiers",
+          "getterType": "CAFArrayCharacteristic"
+        },
+        {
+          "name": "currentIndex",
+          "getterType": "CAFUInt32Characteristic"
+        },
+        {
+          "name": "defaultIndex",
+          "getterType": "CAFUInt32Characteristic"
+        }
+      ],
+      "characteristicTypeLiterals": [
+        "0x0000000030000037",
+        "0x0000000030000038",
+        "0x0000000030000039"
+      ],
+      "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+    },
+    "AutomakerSetting": {
+      "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFAutomakerSetting.mm",
+      "sha256": "5bae6a995bc9f901324447dc343cc52db33db6b94d1c97429f78b1071366f204",
+      "declaredCharacteristicAccessors": [
+        {
+          "name": "disabled",
+          "getterType": "CAFBoolCharacteristic"
+        },
+        {
+          "name": "hidden",
+          "getterType": "CAFBoolCharacteristic"
+        },
+        {
+          "name": "limitableUIElement",
+          "getterType": "CAFBoolCharacteristic"
+        },
+        {
+          "name": "showAudioBrandLogo",
+          "getterType": "CAFBoolCharacteristic"
+        },
+        {
+          "name": "prominenceInfo",
+          "getterType": "CAFProminenceInformationCharacteristic"
+        },
+        {
+          "name": "category",
+          "getterType": "CAFSettingsCategoryCharacteristic"
+        },
+        {
+          "name": "identifier",
+          "getterType": "CAFStringCharacteristic"
+        },
+        {
+          "name": "sectionIdentifier",
+          "getterType": "CAFStringCharacteristic"
+        },
+        {
+          "name": "symbolName",
+          "getterType": "CAFStringCharacteristic"
+        },
+        {
+          "name": "userVisibleLabel",
+          "getterType": "CAFStringCharacteristic"
+        },
+        {
+          "name": "vehicleLayoutKey",
+          "getterType": "CAFStringCharacteristic"
+        },
+        {
+          "name": "sortOrder",
+          "getterType": "CAFUInt8Characteristic"
+        }
+      ],
+      "characteristicTypeLiterals": [
+        "0x0000000030000001",
+        "0x0000000030000003",
+        "0x0000000030000019",
+        "0x000000003000005E",
+        "0x0000000032000011",
+        "0x0000000036000006",
+        "0x0000000036000011",
+        "0x0000000036000020",
+        "0x0000000036000021",
+        "0x0000000036000023",
+        "0x0000000036000028",
+        "0x0000000036000065"
+      ],
+      "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+    },
+    "SelectSetting": {
+      "listingUnavailable": true,
+      "errorKind": "HTTPError"
+    },
+    "NumericSetting": {
+      "listingUnavailable": true,
+      "errorKind": "HTTPError"
+    },
+    "Service": {
+      "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFService.mm",
+      "sha256": "1ef99a30e0b8a5d4e837377520dc9dae6e59d743b0529a1fe4e9615afc37465b",
+      "declaredCharacteristicAccessors": [],
+      "characteristicTypeLiterals": [],
+      "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+    },
+    "Accessory": {
+      "url": "https://raw.githubusercontent.com/EthanArbuckle/iPhone18-3_26.1_23B85_Restore/90aa0cfe59d9682b4265e1354c8b19ec3c7823ab/System/Library/PrivateFrameworks/CarAccessoryFramework.framework/CarAccessoryFramework/CAFAccessory.mm",
+      "sha256": "590604a7feb97ec5aa2d056a0cc52357f87dc2e9d4b2ee8604e70930b101f80f",
+      "declaredCharacteristicAccessors": [],
+      "characteristicTypeLiterals": [],
+      "scope": "Declared class facts only; inherited accessors, actions and wire payloads need separate contracts."
+    }
+  },
+  "characteristicReview": {
+    "reviewed": "2026-10-09",
+    "scope": "Identifier/getter facts extracted from pinned published analysis, without copying implementation. Absence from a class declaration is not absence from inherited services. This does not determine required car capabilities or complete accepted wire requests."
+  }
+}

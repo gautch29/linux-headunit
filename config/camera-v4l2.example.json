@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "manualActivation": true,
+  "streamIdentifier": "rear-camera",
+  "source": {
+    "kind": "v4l2",
+    "device": "/dev/video0",
+    "pixelFormat": "yuyv",
+    "delivery": "dma-buf"
+  },
+  "capture": {"width": 1280, "height": 720, "frameRate": 30, "maximumAgeMs": 150},
+  "destination": {
+    "panel": "main",
+    "canvas": {"width": 1920, "height": 720},
+    "frame": {"x": 320, "y": 0, "width": 1280, "height": 720},
+    "rotationDegrees": 0,
+    "mirrorHorizontal": false
+  }
+}

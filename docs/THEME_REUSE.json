@@ -1,0 +1,378 @@
+{
+  "description": "Reuse of our earlier native Ultra research code, authorized by the user on 2026-09-26. These files were local additions, absent from upstream LIVI HEAD. No LIVI app, Rust helper or transport bridge is imported. Namespace and host API adaptations are reviewed in git history.",
+  "files": [
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/scene.hpp",
+      "sourceSha256": "817124af248b038e1869ea9c1ebe8402fbe8df11d3176d51dbb388e8bc22f763",
+      "destination": "include/headunit/theme/scene.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/video_stream.hpp",
+      "sourceSha256": "5dcefef27e4e6a7cfe9d3e62aa36cedebd3391b9c5002ec36de3f232f1a29145",
+      "destination": "include/headunit/theme/video_stream.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/native_frame.hpp",
+      "sourceSha256": "2d03f3c5133b1e8a64e6d99cc03f72c697405662d997d80bb9122e7e4e50ad5b",
+      "destination": "include/headunit/theme/native_frame.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/scene.cpp",
+      "sourceSha256": "5664603d2baa5ae9a109b2e5cc4af19a6c282c1f538d4b51f978704a638d3a91",
+      "destination": "src/theme/scene.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/video_stream.cpp",
+      "sourceSha256": "f019b99d2273f5786efba50ed4032415c7170d860ef2cd53b48d34c5b72272f4",
+      "destination": "src/theme/video_stream.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/alpha_mask.cpp",
+      "sourceSha256": "1323095330d36465414fead682a48cf828ee78ae95b5080457c84af17ca3c117",
+      "destination": "src/theme/alpha_mask.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/script_graphics.cpp",
+      "sourceSha256": "31ccbf99cb6ec89b0c4c30bc403dc7d04f6f76c84dc80677634ed22e860afde3",
+      "destination": "src/theme/script_graphics.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/script_graphics.hpp",
+      "sourceSha256": "ed89893cd751ef209e9a936aa35dc64dced3809a3f54e35273779b966b168f5e",
+      "destination": "src/theme/script_graphics.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/graphics_test.cpp",
+      "sourceSha256": "1dffca9bec69dc0f3178c6f6fb1367503ec4eeff7a650808116370b9a781709f",
+      "destination": "tests/theme_graphics_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/script_runtime.cpp",
+      "sourceSha256": "dfa0a12d1e5e45bb12d44763d48f41a64e21a06b78571e43003867139fdb287d",
+      "destination": "src/lua_host.cpp",
+      "scope": "Bounded loadstring policy and private mutable global initialization; remaining full runtime pending migration."
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/protocol.hpp",
+      "sourceSha256": "da6b96b5af2b600c2a1e9525c94e0b9161dd8ba253c6aeee546204ab3667b996",
+      "destination": "include/headunit/theme/protocol.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/opack.hpp",
+      "sourceSha256": "f152ade076d9aa6ee70a1fba0b277029cd15e856d78c257bb0c98e30491badee",
+      "destination": "include/headunit/theme/opack.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/ui_channel.hpp",
+      "sourceSha256": "e5849e001942dd2c0d219f27567603209616aa9125c8df80499ebda604c2cb4b",
+      "destination": "include/headunit/theme/ui_channel.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/vehicle_data.hpp",
+      "sourceSha256": "9e06d76401b96feddd2225cb744d48789497ed15c9d0c96b24f7416ea45ee4d8",
+      "destination": "include/headunit/theme/vehicle_data.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/vehicle_service.hpp",
+      "sourceSha256": "28596b3a0446b727bd8917e79877c6c3c69598e2ed892035728ffad6a663fd53",
+      "destination": "include/headunit/theme/vehicle_service.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/vehicle_script_view.hpp",
+      "sourceSha256": "e76b6d10479c45735e642d5f21ec1a6c5ca836c03d63f846f570d31dd17da458",
+      "destination": "include/headunit/theme/vehicle_script_view.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/local_vehicle_profile.hpp",
+      "sourceSha256": "fd1853392a3ead73f4b0b3cf98cf803bc760819a517fcba478b3c7403e1d3973",
+      "destination": "include/headunit/theme/local_vehicle_profile.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/sensor_input.hpp",
+      "sourceSha256": "3ebba7898407c8ba4c952637edcae3d0413e59532d2abb1eaf43c3fcde6957d6",
+      "destination": "include/headunit/theme/sensor_input.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/script_runtime.hpp",
+      "sourceSha256": "8fc228c2f3d5a4399cf71d524a0e643509dc85a0212c0fd2bb6877773fc90ded",
+      "destination": "include/headunit/theme/script_runtime.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/script_channel.hpp",
+      "sourceSha256": "8017b3c595948d460db6e24d7f05c92ce79103c14046a9cd3bc77679bf4d35b3",
+      "destination": "include/headunit/theme/script_channel.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/protocol.cpp",
+      "sourceSha256": "0877ca59c16437e9ffa93dd16f4a571ded5b7a507ded3ef083679b875510bdee",
+      "destination": "src/theme/protocol.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/opack.cpp",
+      "sourceSha256": "c669ffa1e6833d45e89f543464eb68740f32930649210bbfd4f957f1404df16f",
+      "destination": "src/theme/opack.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/ui_channel.cpp",
+      "sourceSha256": "addd7ae92076c275caea6990f57c2ea1926717d7a117a85cc6f3670df8a73f51",
+      "destination": "src/theme/ui_channel.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/vehicle_data.cpp",
+      "sourceSha256": "eca1ca04efbba947508ec8fee65b584a6c09a73b994e1bfc6ed0195010bc91ab",
+      "destination": "src/theme/vehicle_data.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/vehicle_service.cpp",
+      "sourceSha256": "0137c2552524a3e12903ff03c2f370065169dc16ea1d95764e179ffe42db2f7b",
+      "destination": "src/theme/vehicle_service.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/vehicle_script_view.cpp",
+      "sourceSha256": "5e018ff3131a74bfdf785fbc223d941d2e4d33e13e976d07755e4064854f34e4",
+      "destination": "src/theme/vehicle_script_view.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/local_vehicle_profile.cpp",
+      "sourceSha256": "52c6912f40208b3a78ee80bdf54a9310889e00406d686524ac4b895837c65b20",
+      "destination": "src/theme/local_vehicle_profile.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/sensor_input.cpp",
+      "sourceSha256": "0f8427fc5ece5a9065abeee08cbd83a2ca47e0c5331a741068d0b7a1f8536712",
+      "destination": "src/theme/sensor_input.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/script_runtime.cpp",
+      "sourceSha256": "dfa0a12d1e5e45bb12d44763d48f41a64e21a06b78571e43003867139fdb287d",
+      "destination": "src/theme/script_runtime.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/script_channel.cpp",
+      "sourceSha256": "c867b93e8e4b3921f76d5b4f5c99c189f83af39a572f4a23b86024f4f023ba5e",
+      "destination": "src/theme/script_channel.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/script_runtime_test.cpp",
+      "sourceSha256": "dc34bb17c0ec8b47cf8df77e0d9266ce02b391846ba58179adce0b791c0c4984",
+      "destination": "tests/theme_script_runtime_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/vehicle_script_test.cpp",
+      "sourceSha256": "c7cb2a70baf1bc85be21fc643ebb46eb517357908319e65d44c8f53f535ef46a",
+      "destination": "tests/theme_vehicle_script_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/vehicle_service_test.cpp",
+      "sourceSha256": "490a9b48fa48e4abf06e0318b98180e5bb6948b3e08f7e949e71b446a5dba408",
+      "destination": "tests/theme_vehicle_service_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/vehicle_test.cpp",
+      "sourceSha256": "0821630fc343e69240fef16b80e0342fcaa1d094eb331aecb5613f8612bfd4cb",
+      "destination": "tests/theme_vehicle_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/local_vehicle_profile_test.cpp",
+      "sourceSha256": "faf071f442d43c24577aa419ec50711e96c3d5a530123e2c7641a6ee7a530ef0",
+      "destination": "tests/theme_local_vehicle_profile_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/sensor_input_test.cpp",
+      "sourceSha256": "ac1d90d349a09d05ddcfc4e7037331b4de1f19af68e75d8fe5e7d34888ac590f",
+      "destination": "tests/theme_sensor_input_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/protocol_test.cpp",
+      "sourceSha256": "ff6c07217c1444b26c244d90dc2fc0b1657c258bf0d18874f8d328ed804a38a7",
+      "destination": "tests/theme_protocol_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/opack_test.cpp",
+      "sourceSha256": "097421aee6f04dc3e8eafa8955fd77591d8d114bdc1c60991f2968aac4794c3c",
+      "destination": "tests/theme_opack_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/ui_channel_test.cpp",
+      "sourceSha256": "a0c4b339175d0921f3ace4831f936eb3ca2980738968a02ca4e5416a842061c6",
+      "destination": "tests/theme_ui_channel_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/script_asset_probe.cpp",
+      "sourceSha256": "a2949db318515a2793f8666779ce29c65fe837f67e2a92ee700fc13d78940982",
+      "destination": "src/theme/asset_probe.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/cmake/PatchLuau.cmake",
+      "sourceSha256": "12ef91ba826ce60d1cbe8198d80afc1387cc59a4ccb6d995e8642b2665853409",
+      "destination": "cmake/PatchLuau.cmake"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/gpu_compositor.hpp",
+      "sourceSha256": "32c4e86a61c899aa3eed63903d3d11ea451732353d016ad503b14438214a2f0c",
+      "destination": "include/headunit/theme/gpu_compositor.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/gpu_compositor.cpp",
+      "sourceSha256": "85cc5443461ebb41b51b3a179749ca4a43a8c927e97f1b1885558a0cc26c775e",
+      "destination": "src/theme/gpu_compositor.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/media_clock.hpp",
+      "sourceSha256": "647d630ceb8eaccf90b863616ed81dfd08400cd4c2cc86179dbcafafd18fcada",
+      "destination": "include/headunit/theme/media_clock.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/media_clock.cpp",
+      "sourceSha256": "ef334af9a016bb5ff1ae7c3f34aa137f4879e24273a799b42486903a58b2d807",
+      "destination": "src/theme/media_clock.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/presentation_clock.hpp",
+      "sourceSha256": "2b811cfd7d7d3efb09baac394052ea561913014c3df6f95f41024c2dc3a0ddb8",
+      "destination": "include/headunit/theme/presentation_clock.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/presentation_clock.cpp",
+      "sourceSha256": "f248c45317608c5db5da3cc1528a45f13985f0c5d48bf5ca5fc1c9b2c824c877",
+      "destination": "src/theme/presentation_clock.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/skia_scene.hpp",
+      "sourceSha256": "a7868e49d6317f1d999fc3b40c56030d8b4731fa202f14b8bb6f6d881f419bcc",
+      "destination": "src/theme/skia_scene.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/skia_scene.cpp",
+      "sourceSha256": "707242ff7c12e8ad996c36754543808948a6074b2ccfaf30aa283ed6dbc07723",
+      "destination": "src/theme/skia_scene.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/wayland_window.hpp",
+      "sourceSha256": "c546348425f0de1bdfe1666195bccd7f87626f3fdd16da973571d85f14f2c573",
+      "destination": "src/theme/wayland_window.hpp"
+    },
+    {
+      "source": "native/carplay-ultra/src/wayland_window.cpp",
+      "sourceSha256": "7c538b8ee0e4002878e8125af7fecfc673bf61840957609006bec3457ad9b9b3",
+      "destination": "src/theme/wayland_window.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/gpu_scene_test.cpp",
+      "sourceSha256": "a5bd9c84a821f3c873a8c819e2214047d689844c485f9c934faafdec62c533c4",
+      "destination": "tests/theme_gpu_scene_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/gpu_conical_test.cpp",
+      "sourceSha256": "475719a0c9ef74a755bd223fdf6eb5101f50fcd1d0aa5fd17fb0943a8a85f902",
+      "destination": "tests/theme_gpu_conical_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/gpu_presentation_test.cpp",
+      "sourceSha256": "44da0e2e765c815bf87e72ee854cc60f36ea5d699cafb3738ca69b7d0dd504be",
+      "destination": "tests/theme_gpu_presentation_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/preview_presentation_test.cpp",
+      "sourceSha256": "b3082761791cfc196990b907a0c4a1e12b13be9bb01d63ef33ad6234cfc97017",
+      "destination": "tests/theme_preview_presentation_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/media_clock_test.cpp",
+      "sourceSha256": "2decd8ef8d5ed44528b8411aec6c60e53fa394d6ee7ad10cf3f5f64220f082b0",
+      "destination": "tests/theme_media_clock_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/presentation_clock_test.cpp",
+      "sourceSha256": "f42a08d2e72bca5320686e8c8faf31a8c317ed8110b4b2bdeafe2d62830933c6",
+      "destination": "tests/theme_presentation_clock_test.cpp"
+    },
+    {
+      "source": "native/carplay-ultra/tests/wayland_gpu_test.py",
+      "sourceSha256": "d756f46333ae45b4f471b3e3c0aa4e28bed16f887b9715656f52748e5b7b8c2e",
+      "destination": "tests/theme_wayland_gpu_test.py"
+    },
+    {
+      "source": "native/carplay-ultra/cmake/Skia.cmake",
+      "sourceSha256": "cead2f33b05ec56ebc0f0e9b6a6fe32c4bcf6c1a9a218367461c6e613c1229cd",
+      "destination": "cmake/Skia.cmake"
+    },
+    {
+      "source": "native/carplay-ultra/cmake/skia-pi.gnargs",
+      "sourceSha256": "fc69a0dd02b5d84727126dcdf47700d9f3560ef1c78ef51b35c1630cad5874f6",
+      "destination": "cmake/skia-pi.gnargs"
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/video_decoder.hpp",
+      "sourceSha256": "1f62e0e3a050ce4337e2cfa26358414cfff12c2b9a2aab81e556b51282201a68",
+      "destination": "include/headunit/theme/video_decoder.hpp",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/src/video_decoder.cpp",
+      "sourceSha256": "18e074e95a6cc4a46bad3eb144c065b73599435cb5769952735523523a31e2bd",
+      "destination": "src/theme/video_decoder.cpp",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/screen_configuration.hpp",
+      "sourceSha256": "cbcc5f7f49b0454bca425b9a238bda2208ca50aaefbee57b3344e035379aca20",
+      "destination": "include/headunit/theme/screen_configuration.hpp",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/src/screen_configuration.cpp",
+      "sourceSha256": "2ea924a9eae7450737f126bc7fa8d1f1d5ff1b641a251ac254c328e351bda13a",
+      "destination": "src/theme/screen_configuration.cpp",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/tests/screen_configuration_test.cpp",
+      "sourceSha256": "51bfd02fd6143aaf584aeee152ed43961860cd4dd670356a6bcc56ec72fd223f",
+      "destination": "tests/theme_screen_configuration_test.cpp",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/tests/video_decoder_probe.cpp",
+      "sourceSha256": "726fb5fe13c3122fbdc233d0dfc1d3142b52ef417cacb16e4530d70a99831995",
+      "destination": "tests/theme_video_decoder_probe.cpp",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/tests/video_decoder.test.cjs",
+      "sourceSha256": "d327267b56aa3b5f366d5d16613559ddda99a023f660403efdc25da6510cf674",
+      "destination": "tests/theme_video_decoder.test.cjs",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/tests/gpu_video_probe.cpp",
+      "sourceSha256": "be70147114eb0d8ecb2c31225cf3fa968cdfc49a80597f2e37d93009c6b5c0f8",
+      "destination": "tests/theme_gpu_video_probe.cpp",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/tests/gpu_video.test.cjs",
+      "sourceSha256": "0ca1f451753c105468ad280d93c5938bd68717a5736690c9a7510da4145e2d95",
+      "destination": "tests/theme_gpu_video.test.cjs",
+      "scope": "Own decoder/configuration and tests; decoder inputs adapted to independent AirplayVideoPacket. Old monitor-only test sections are not included."
+    },
+    {
+      "source": "native/carplay-ultra/src/ui_service.cpp",
+      "sourceSha256": "857ac73752c31aa229945c2cb3238fa004fbf330a966ff827c94d25f81efb9fe",
+      "destination": "src/theme/gpu_display.cpp",
+      "scope": "Adapted scheduling and bootstrap from our own DisplayOutput class. Uses independent ReceiverClock and UiWorker; excludes old UI/video/clock pipe transport, CPU reference mode and capture code. Also adapted our own uses_stream traversal and input pump/stage/complete/suspend integration; iterative bounded traversal, no old pipe transport."
+    },
+    {
+      "source": "native/carplay-ultra/src/native_input_pipe.cpp",
+      "sourceSha256": "78afe9992d5cde38a18d379b0c841ccd4daa90c16034f3b6cfef36be0504e0af",
+      "destination": "src/theme/native_input.cpp",
+      "scope": "Adapted our own native decoder scheduling, staging and receipt completion. Replaced inherited pipe, keys, ScreenStream, diagnostic capture and pipe deadlines with independent authenticated packet ingress; no original LIVI code."
+    },
+    {
+      "source": "native/carplay-ultra/include/livi/ultra/native_input_pipe.hpp",
+      "sourceSha256": "50e1b264e82b8e56d092694f0ddb9350c6ba788299d3889726d91ef7c1e18d5c",
+      "destination": "include/headunit/theme/native_input.hpp",
+      "scope": "Our own native input statistics and scheduling contract; new independent shared transport endpoint and display-owner lifetime."
+    }
+  ]
+}

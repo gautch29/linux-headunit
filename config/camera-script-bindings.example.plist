@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Author: gautch29
+Notice date: 2026-11-23
+Provided as is, without warranty. See NOTICE.md.
+-->
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>schemaVersion</key><integer>1</integer>
+  <key>mode</key><string>local-ui-bindings</string>
+  <key>signals</key><array>
+    <!-- These are receiver-local model IIDs, never Apple phone type IDs.
+         Merge into the vehicle profile using IIDs free in that profile. -->
+    <dict>
+      <key>iid</key><integer>500</integer>
+      <key>path</key><array><string>automakerInputStreams</string><string>criticalInputStream</string><string>inputStreamUID</string></array>
+      <key>instance</key><string>rear-camera</string>
+      <key>kind</key><string>string</string>
+      <key>maxAgeMs</key><integer>1000</integer>
+      <key>fixedValue</key><string>camera</string>
+    </dict>
+    <dict>
+      <key>iid</key><integer>501</integer>
+      <key>path</key><array><string>automakerInputStreams</string><string>criticalInputStream</string><string>on</string></array>
+      <key>instance</key><string>rear-camera</string>
+      <key>kind</key><string>boolean</string>
+      <key>maxAgeMs</key><integer>151</integer>
+    </dict>
+  </array>
+</dict></plist>

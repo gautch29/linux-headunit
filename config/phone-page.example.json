@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 2,
+  "enabled": false,
+  "managerSocket": "/var/lib/headunit/phone-manager/manager.sock",
+  "surfaceControlFile": "/var/lib/headunit/phone-manager/home-surface.request",
+  "surfaceLeaseFile": "/var/lib/headunit/phone-manager/home-surface.lease",
+  "waylandDisplay": "wayland-0",
+  "output": "HDMI-A-1",
+  "homeButton": {
+    "enabled": true,
+    "corner": "bottom-right",
+    "margin": 16,
+    "size": 64
+  }
+}

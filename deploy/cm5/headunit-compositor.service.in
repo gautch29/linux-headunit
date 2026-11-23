@@ -1,0 +1,33 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+[Unit]
+Description=Headunit physical display session
+After=systemd-logind.service systemd-user-sessions.service
+Wants=systemd-logind.service
+Conflicts=getty@tty7.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=@USER@
+PAMName=login
+TTYPath=/dev/tty7
+StandardInput=tty
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+Environment=XDG_RUNTIME_DIR=/run/user/@UID@
+Environment=XDG_SESSION_TYPE=wayland
+Environment=XDG_SEAT=seat0
+Environment=XDG_VTNR=7
+Environment=XDG_CURRENT_DESKTOP=labwc
+ExecStartPre=+/usr/bin/chvt 7
+ExecStart=/usr/bin/labwc -c @REPO@/config/labwc-cm5-dual-rc.xml
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

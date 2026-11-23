@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "input": "/home/pi/.config/headunit/vehicle/adapter.sock",
+  "consumers": {
+    "backup": "/home/pi/.config/headunit/vehicle/backup.sock",
+    "receiver": "/home/pi/.config/headunit/vehicle/receiver.sock",
+    "ultra": "/home/pi/.config/headunit/vehicle/ultra.sock"
+  }
+}

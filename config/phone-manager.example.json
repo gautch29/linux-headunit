@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "stateDirectory": "/var/lib/headunit/phone-manager",
+  "standardDisplayConfig": "/etc/headunit/displays-cm5-standard.conf",
+  "autoConnectSelected": false,
+  "receiverRecoveryAttempts": 0,
+  "pairing": {
+    "enabled": false,
+    "adapter": "hci0"
+  }
+}

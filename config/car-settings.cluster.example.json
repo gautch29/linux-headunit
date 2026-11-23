@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "experimental": true,
+  "sections": [],
+  "settings": [],
+  "cluster_content": {
+    "pages": [
+      {
+        "id": "body",
+        "widget": "body",
+        "panel": "Cluster_Display",
+        "zone": "zone1"
+      },
+      {
+        "id": "tyres",
+        "widget": "tyres",
+        "panel": "Cluster_Display",
+        "zone": "zone1"
+      },
+      {
+        "id": "charging",
+        "widget": "charging",
+        "panel": "Cluster_Display",
+        "zone": "zone1"
+      }
+    ],
+    "trips": [
+      {
+        "id": "current",
+        "label": "Current Trip",
+        "order": 0,
+        "average_speed": {
+          "units": 1032
+        },
+        "distance": {
+          "units": 151
+        },
+        "duration": {
+          "units": 251
+        },
+        "fuel_efficiency": {
+          "units": 674
+        }
+      }
+    ],
+    "seats": [
+      {
+        "id": "driver",
+        "layout": "seat_front_left",
+        "occupancy": {},
+        "buckle": {},
+        "indicator": {}
+      },
+      {
+        "id": "passenger",
+        "layout": "seat_front_right",
+        "occupancy": {},
+        "buckle": {},
+        "indicator": {}
+      }
+    ],
+    "tyres": [
+      {
+        "id": "fixture",
+        "layout": "fixture_tyre",
+        "pressure": {
+          "units": 932
+        },
+        "pressure_state": {},
+        "sensor_state": {}
+      }
+    ],
+    "closures": [
+      {
+        "id": "closure_fixture",
+        "layout": "fixture_closure",
+        "latch": {}
+      }
+    ],
+    "charging": [
+      {
+        "id": "ev",
+        "state": {},
+        "cable": {}
+      }
+    ]
+  }
+}

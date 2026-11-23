@@ -1,0 +1,19 @@
+{
+  "dependency": "GStreamer V4L2 codec plugin",
+  "package": "gstreamer1.0-plugins-bad",
+  "version": "1.26.2-3+rpt4+deb13u3",
+  "architecture": "arm64",
+  "license": "LGPL; package copyright and corresponding source remain in the external dependency directory. Distribution requires the applicable notices and source obligations.",
+  "packageUrl": "https://archive.raspberrypi.com/debian/pool/main/g/gst-plugins-bad1.0/gstreamer1.0-plugins-bad_1.26.2-3+rpt4+deb13u3_arm64.deb",
+  "packageSha256": "c09a5a3c6404a05ef999d211ce6aafba1f78ce4bce7a29a776247731e88d3e46",
+  "pluginSha256": "ee4d66570b15e1ce8f571eb476c58428418e5d4e07b1f04828d45c212c81d6c0",
+  "sourceDirectory": "https://archive.raspberrypi.com/debian/pool/main/g/gst-plugins-bad1.0/",
+  "sourceArchives": {
+    "gst-plugins-bad1.0_1.26.2.orig.tar.xz": "cb116bfc3722c2de53838899006cafdb3c7c0bc69cd769b33c992a8421a9d844",
+    "gst-plugins-bad1.0_1.26.2-3+rpt4+deb13u3.debian.tar.xz": "2faf8bd65a0a65a6b684b19de25acece58f9cef044a2328d8a9639a91e9dcc08"
+  },
+  "upstreamCropFix": "https://github.com/GStreamer/gstreamer/commit/e7be87b3de56e8c9922359c410b5c17864cbbf29",
+  "testPluginDirectory": "/home/headunit/ultra-deps/gst-v4l2-crop/plugins",
+  "systemPackageUnchanged": "1.26.2-3+rpt3+deb13u1",
+  "scope": "Extracted packaged plugin selected only in test-process environments. System GStreamer libraries and plugin files were not replaced. No custom decoder source patch or original LIVI code was imported."
+}

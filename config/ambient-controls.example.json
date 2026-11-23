@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 2,
+  "targets": [
+    {"key": "cabin.ambient.rgbw", "kind": "ambient_light", "writable": false, "max_age_ms": 2000}
+  ]
+}

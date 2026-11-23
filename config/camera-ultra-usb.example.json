@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "manualActivation": true,
+  "streamIdentifier": "camera",
+  "source": {
+    "kind": "v4l2",
+    "device": "/dev/video0",
+    "pixelFormat": "yuyv",
+    "delivery": "cpu-copy",
+    "adaptation": {
+      "width": 640,
+      "height": 360,
+      "fit": "contain"
+    }
+  },
+  "capture": {
+    "width": 1650,
+    "height": 720,
+    "frameRate": 30,
+    "maximumAgeMs": 150
+  },
+  "destination": {
+    "panel": "main",
+    "canvas": {
+      "width": 1920,
+      "height": 720
+    },
+    "frame": {
+      "x": 135,
+      "y": 0,
+      "width": 1650,
+      "height": 720
+    },
+    "rotationDegrees": 0,
+    "mirrorHorizontal": false
+  }
+}

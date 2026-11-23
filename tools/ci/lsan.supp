@@ -1,0 +1,8 @@
+# Author: gautch29
+# Notice date: 2026-11-23
+# Provided as is, without warranty. See NOTICE.md.
+
+# Process-lifetime caches in system libraries, not headunit leaks.
+# fontconfig's configuration and Cairo's toy font face cache live until exit.
+leak:libfontconfig.so
+leak:cairo_toy_font_face_create

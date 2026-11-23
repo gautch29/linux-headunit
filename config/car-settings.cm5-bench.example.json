@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "experimental": true,
+  "sections": [
+    {
+      "id": "comfort",
+      "label": "Comfort — simulation",
+      "footer": "These controls use an in-memory test provider.",
+      "order": 0
+    },
+    {
+      "id": "climate",
+      "label": "Climate — simulation",
+      "footer": "Airflow routing shares the vehicle backend with Climate.",
+      "order": 1
+    },
+    {
+      "id": "vehicle",
+      "label": "Vehicle information",
+      "order": 2
+    }
+  ],
+  "settings": [
+    {
+      "id": "comfort.lighting",
+      "section": "comfort",
+      "label": "Comfort lighting",
+      "kind": "boolean",
+      "initial": false
+    },
+    {
+      "id": "comfort.brightness",
+      "section": "comfort",
+      "label": "Interior brightness",
+      "kind": "float",
+      "minimum": 0,
+      "maximum": 100,
+      "step": 5,
+      "initial": 50,
+      "minimum_symbol": "sun.min",
+      "maximum_symbol": "sun.max"
+    },
+    {
+      "id": "comfort.timeout",
+      "section": "comfort",
+      "label": "Light delay",
+      "kind": "integer",
+      "minimum": 0,
+      "maximum": 60,
+      "step": 5,
+      "initial": 15
+    },
+    {
+      "id": "comfort.theme",
+      "section": "comfort",
+      "label": "Lighting theme",
+      "kind": "select",
+      "initial": 0,
+      "choices": [
+        {
+          "label": "Warm"
+        },
+        {
+          "label": "Cool"
+        },
+        {
+          "label": "Custom",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "id": "comfort.notifications",
+      "section": "comfort",
+      "label": "Comfort notifications",
+      "kind": "multi_select",
+      "initial": [
+        0
+      ],
+      "choices": [
+        {
+          "label": "Lighting"
+        },
+        {
+          "label": "Climate"
+        }
+      ]
+    },
+    {
+      "id": "climate.driver.airflow",
+      "section": "climate",
+      "label": "Driver airflow",
+      "kind": "select",
+      "binding": "climate.driver.vents.index",
+      "initial": 0,
+      "choices": [
+        {
+          "label": "Upper vents"
+        },
+        {
+          "label": "Upper and lower vents"
+        },
+        {
+          "label": "Lower vents"
+        },
+        {
+          "label": "Windscreen and lower vents"
+        }
+      ]
+    },
+    {
+      "id": "vehicle.connection",
+      "section": "vehicle",
+      "label": "Vehicle provider",
+      "kind": "text",
+      "initial": "Simulation — no car connected"
+    }
+  ]
+}

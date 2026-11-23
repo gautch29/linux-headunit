@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Author: gautch29
+Notice date: 2026-11-23
+Provided as is, without warranty. See NOTICE.md.
+-->
+
+<!-- Temporary CM5 Wayland compositor setup. The headunit chooses outputs
+     through xdg-shell; this only binds its USB touchscreen to HDMI-A-1. -->
+<labwc_config>
+  <core>
+    <reuseOutputMode>yes</reuseOutputMode>
+  </core>
+  <!-- One touchscreen, on the main output. libinput can append a USB-port
+       suffix to its device name; omitting deviceName covers those variants. -->
+  <touch mapToOutput="HDMI-A-1" mouseEmulation="no" />
+</labwc_config>
