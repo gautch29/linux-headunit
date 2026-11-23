@@ -6,39 +6,62 @@ Provided as is, without warranty. See NOTICE.md.
 
 # Linux Head Unit
 
-**Dual-display receiver for CarPlay and CarPlay Ultra.**
+**Wireless CarPlay Ultra receiver for Raspberry Pi Compute Module 5.**
 
-Linux Head Unit is an experimental head unit for the Raspberry Pi Compute
-Module 5. It drives a main touchscreen and a separate instrument cluster. The
-native dashboard gives you Home, vehicle pages and instruments before the phone
-connects and when it disconnects.
+Linux Head Unit brings CarPlay Ultra to a main touchscreen and a separate
+instrument cluster. It renders the signed Ultra scenes locally, combines
+separate iPhone video streams with vehicle data, and maps touchscreen input
+back to the phone.
 
-[Try it without a phone](#try-it-without-a-phone) ·
-[Set up a CM5 bench](#set-up-a-cm5-bench) ·
+> **A compatible MFi authentication chip is required for the documented live
+> iPhone setup.** Connect the MFi coprocessor to the CM5 over I²C. Ultra also
+> requires a separately supplied compatible signed scene package and trust
+> inputs. [MFi authentication](docs/MFI_COPROCESSOR.md) ·
+> [Signed assets](docs/ULTRA_ASSETS.md)
+
+[CarPlay Ultra on the bench](#carplay-ultra-on-the-bench) ·
+[CM5 setup](#set-up-a-cm5-bench) · [Offline demos](#try-it-without-a-phone) ·
 [Documentation](docs/README.md) · [License](LICENSE)
 
-## The two displays
+## CarPlay Ultra on the bench
 
-| Main touchscreen | Instrument cluster |
+Earlier CM5 bench generations ran CarPlay Ultra with a real iPhone. The main
+display showed the Ultra interface with touch, while the cluster combined a
+second phone stream with locally rendered gauges. Apple Maps appeared between
+the gauges. [CarPlay Ultra integration guide](docs/CARPLAY_ULTRA_GUIDE.md)
+
+| Feature | Bench evidence and remaining work |
 | --- | --- |
-| ![Native Home showing the app dock and phone-free media state](docs/images/native-home.png) | ![Native Sport cluster showing speed, RPM and simulated vehicle readings](docs/images/native-cluster.png) |
-| Native Home with no phone connected. | Native Sport layout with simulated vehicle and session data. |
-
-Both images come from offline fixtures rendered by this repository.
-
-## Development status
-
-| Area | Evidence and remaining work |
-| --- | --- |
-| **Native dashboard** | Phone management, media controls, configurable gauges and trip statistics. The native cluster runs with simulated vehicle data. |
-| **Wireless projection** | Earlier CM5 and iPhone runs exercised standard CarPlay, CarPlay Ultra on two panels, and Home/Back transitions. Repeated reconnection and physical touch timing remain open. |
-| **Vehicle integration** | Dated observations and simulated Climate and settings. Physical sensors, HVAC and other actuators still need qualification. |
-| **Camera** | Earlier CM5 runs exercised Ultra camera Punch-through and USB camera recovery. Full phone-side controls and session continuity still need live testing. |
+| **Two displays and touch** | The main touchscreen and signed cluster ran together. Repeated wireless reconnect, physical touch timing and sustained full-resolution frame rates remain open. |
+| **Vehicle data and Climate** | Local gauges and iPhone Climate and settings were exercised with simulated data. Physical sensors and actuators still need qualification. |
+| **Camera Punch-through** | Earlier runs exercised camera video inside the signed main scene and USB camera recovery. Full phone-side camera controls and continuity still need live testing. |
 | **Audio** | Component and silent-sink tests cover parts of playback, mixing and recovery. Audible output, microphone input and calls still need device tests. |
 
-The current source has passed portable and native GTK checks on macOS. The
-historical phone tests describe earlier bench generations. See the
-[acceptance criteria](docs/GOAL.md) and [roadmap](docs/ROADMAP.md).
+The project also supports standard CarPlay. Native Home and the native cluster
+provide a fallback after disconnect. The current source has passed portable and
+GTK checks on macOS. Live results above describe earlier bench generations.
+[Acceptance criteria](docs/GOAL.md) · [Roadmap](docs/ROADMAP.md)
+
+## Set up a CM5 bench
+
+1. Start with a wireless Raspberry Pi Compute Module 5, a main display with
+   touch input, a separate cluster display and a compatible **MFi authentication
+   coprocessor on I²C**. The receiver uses the chip to authenticate with the
+   iPhone. [Authentication hardware](docs/CM5_BRINGUP.md#authentication-hardware)
+2. Install Raspberry Pi OS Lite (64-bit Trixie), the Wayland compositor and
+   receiver dependencies. A full GPU build also needs the pinned Skia
+   dependency. [CM5 bring-up](docs/CM5_BRINGUP.md) · [GPU rendering](docs/GPU_RENDERING.md)
+3. Configure the two outputs, physical panel sizes and touchscreen transform.
+   Start with simulated vehicle data. [Configuration](docs/CONFIGURATION.md)
+4. Supply your private accessory identity, network and pairing configuration,
+   along with the signed scene package and trust inputs for Ultra. Run preflight
+   and publish a sealed generation. [Phone setup](docs/PHONE_PAIRING.md) ·
+   [Asset verification](docs/ULTRA_ASSETS.md) · [Appliance releases](docs/APPLICATION_RELEASES.md)
+
+Hardware authentication is the default and the path that reached full
+Ultra readiness in the live tests. The experimental software provider reached
+iAP2 authentication in a limited trial. Its end-to-end CarPlay path remains
+unqualified. [Authentication trial](docs/MFI_COPROCESSOR.md#real-phone-trial--9-october-2026)
 
 ## Try it without a phone
 
@@ -91,24 +114,14 @@ python3 tools/preview_native_home.py --empty --all-tabs --home-only \
 ```
 
 The command writes `home.png` into a new output directory. Both demos use
-local fixtures and need no phone, vehicle, pairing material or signed theme.
+local fixtures and run without an iPhone, MFi chip, vehicle or signed theme.
 
-## Set up a CM5 bench
+| Main touchscreen | Instrument cluster |
+| --- | --- |
+| ![Native Home showing the app dock and phone-free media state](docs/images/native-home.png) | ![Native Sport cluster showing speed, RPM and simulated vehicle readings](docs/images/native-cluster.png) |
+| Native Home with no phone connected. | Native Sport layout with simulated vehicle and session data. |
 
-1. Install Raspberry Pi OS Lite (64-bit Trixie) and the compositor, GStreamer
-   and receiver dependencies. A full GPU receiver build also needs the pinned
-   Skia dependency. See [CM5 bring-up](docs/CM5_BRINGUP.md) and
-   [GPU rendering](docs/GPU_RENDERING.md).
-2. Copy the relevant examples from `config/` and set the actual Wayland
-   outputs, physical panel sizes and touch transform. Start with simulated
-   vehicle data. See [configuration](docs/CONFIGURATION.md).
-3. For a live phone, supply your own authentication, network and pairing
-   configuration. CarPlay Ultra also requires a compatible, independently
-   supplied signed scene and its trust inputs. See
-   [phone setup](docs/PHONE_PAIRING.md) and [asset verification](docs/ULTRA_ASSETS.md).
-4. Run the release preflight and publish a sealed generation. The receiver,
-   native cluster and compositor each have one owner. See
-   [appliance releases](docs/APPLICATION_RELEASES.md).
+Both images come from offline fixtures rendered by this repository.
 
 ## Code and contributions
 
